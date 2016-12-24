@@ -1,0 +1,10 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classIFileDesc.html" title="IFileDesc" alt="" coords="5,56,84,83"/>
+<area shape="rect" id="node2" href="$classCEpoll.html" title="Representation of epoll(7). " alt="" coords="138,5,199,32"/>
+<area shape="rect" id="node3" href="$classCFile.html" title="CFile" alt="" coords="142,56,195,83"/>
+<area shape="rect" id="node5" href="$classCSocket.html" title="CSocket" alt="" coords="132,132,205,159"/>
+<area shape="rect" id="node4" href="$classCPosixShmFile.html" title="CPosixShmFile" alt="" coords="260,43,373,69"/>
+<area shape="rect" id="node6" href="$classCListenSocket.html" title="CListenSocket" alt="" coords="263,93,371,120"/>
+<area shape="rect" id="node7" href="$classCTcpConnSocket.html" title="CTcpConnSocket" alt="" coords="253,144,380,171"/>
+<area shape="rect" id="node8" href="$classCUdpSocket.html" title="CUdpSocket" alt="" coords="268,195,365,221"/>
+</map>

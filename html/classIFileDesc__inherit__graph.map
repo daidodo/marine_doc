@@ -1,0 +1,9 @@
+<map id="IFileDesc" name="IFileDesc">
+<area shape="rect" id="node2" href="$classCEpoll.html" title="Representation of epoll(7). " alt="" coords="5,80,67,107"/>
+<area shape="rect" id="node3" href="$classCFile.html" title="CFile" alt="" coords="91,80,144,107"/>
+<area shape="rect" id="node5" href="$classCSocket.html" title="CSocket" alt="" coords="263,80,337,107"/>
+<area shape="rect" id="node4" href="$classCPosixShmFile.html" title="CPosixShmFile" alt="" coords="38,155,151,181"/>
+<area shape="rect" id="node6" href="$classCListenSocket.html" title="CListenSocket" alt="" coords="175,155,283,181"/>
+<area shape="rect" id="node7" href="$classCTcpConnSocket.html" title="CTcpConnSocket" alt="" coords="307,155,434,181"/>
+<area shape="rect" id="node8" href="$classCUdpSocket.html" title="CUdpSocket" alt="" coords="458,155,555,181"/>
+</map>
