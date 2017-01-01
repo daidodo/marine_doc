@@ -143,7 +143,7 @@ Public Member Functions</h2></td></tr>
  If the returned integer would be larger than <code>max</code>, <code>max</code> will be returned; </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">key</td><td>Attribute name </td></tr>
-    <tr><td class="paramname">strdefault</td><td>Default value if <code>key</code> is not found, <em>before</em> range checking </td></tr>
+    <tr><td class="paramname">ndefault</td><td>Default value if <code>key</code> is not found, <em>before</em> range checking </td></tr>
     <tr><td class="paramname">min</td><td>Lower boundary of the returned value </td></tr>
     <tr><td class="paramname">max</td><td>Upper boundary of the returned value </td></tr>
   </table>
@@ -182,7 +182,7 @@ static const int&#160;</td><td class="memItemRight" valign="bottom"><b>kFormatCo
 <dl class="section user"><dt><code>kFormatSpace</code> </dt><dd>An attribute has the format of <code>NAME VALUE</code>, which means <code>SPACE</code> cannot be part of an attribute name or value. <br />
  Example: <div class="fragment"><div class="line"><span class="preprocessor">  # this is an example of kFormatSpace conf file.</span></div><div class="line">first=attribute=name     first=attribute=value     # first attribute description</div><div class="line">  second:attribute:name  second:attribute:value</div><div class="line">third_attribute_name       # with an empty value</div></div><!-- fragment --></dd></dl>
 <dl class="section user"><dt><code>kFormatColon</code> </dt><dd>An attribute has the format of <code>NAME : VALUE</code>, which means <code></code>: cannot be part of an attribute name or value. <br />
- Example: <div class="fragment"><div class="line"><span class="preprocessor">  # this is an example of kFormatColon conf file.</span></div><div class="line">first attribute name : first attribute value     # first attribute description</div><div class="line">  second attribute name : second attribute value</div><div class="line">third_attribute_name       # with an empty value</div></div><!-- fragment --> </dd></dl>
+ Example: <div class="fragment"><div class="line"><span class="preprocessor">  # this is an example of kFormatColon conf file.</span></div><div class="line">first=attribute=name : first attribute value     # first attribute description</div><div class="line">  second attribute name : second attribute value</div><div class="line">third_attribute_name       # with an empty value</div></div><!-- fragment --> </dd></dl>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="a6d4d88c0c598a9ab97f1ef9f208c9960"></a>
 <div class="memitem">
