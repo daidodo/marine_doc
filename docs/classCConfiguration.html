@@ -46,6 +46,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
@@ -183,11 +184,11 @@ static const int&#160;</td><td class="memItemRight" valign="bottom"><b>kFormatCo
  There is only one attribute per line. Empty lines are allowed. Any content after <code>#</code> will be treated as comments, until the end of the line. <br />
  Attribute name and value consist of any readable characters. Leading and trailing spaces will be trimmed. But spaces inside of a name or value are considered part of it. <br />
  <a class="el" href="classCConfiguration.html" title="Parse config file and get attributes. ">CConfiguration</a> supports 3 formats of config files:</p>
-<dl class="section user"><dt><code>kFormatEqual</code> </dt><dd>An attribute has the format of <code>NAME = VALUE</code>, which means <code>=</code> cannot be part of a attribute name or value. <br />
+<dl class="section user"><dt><code>kFormatEqual</code> </dt><dd>An attribute has the format of <code>NAME = VALUE</code>, which means <code>=</code> cannot be part of an attribute name or value. <br />
  Example: <div class="fragment"><div class="line"><span class="preprocessor">  # this is an example of kFormatEqual conf file.</span></div><div class="line">first attribute name = first attribute value     # first attribute description</div><div class="line">  second:attribute:name = second:attribute:value</div><div class="line">third_attribute_name       # with an empty value</div></div><!-- fragment --></dd></dl>
-<dl class="section user"><dt><code>kFormatSpace</code> </dt><dd>An attribute has the format of <code>NAME VALUE</code>, which means <code>SPACE</code> cannot be part of a attribute name or value. <br />
+<dl class="section user"><dt><code>kFormatSpace</code> </dt><dd>An attribute has the format of <code>NAME VALUE</code>, which means <code>SPACE</code> cannot be part of an attribute name or value. <br />
  Example: <div class="fragment"><div class="line"><span class="preprocessor">  # this is an example of kFormatSpace conf file.</span></div><div class="line">first=attribute=name     first=attribute=value     # first attribute description</div><div class="line">  second:attribute:name  second:attribute:value</div><div class="line">third_attribute_name       # with an empty value</div></div><!-- fragment --></dd></dl>
-<dl class="section user"><dt><code>kFormatColon</code> </dt><dd>An attribute has the format of <code>NAME : VALUE</code>, which means <code></code>: cannot be part of a attribute name or value. <br />
+<dl class="section user"><dt><code>kFormatColon</code> </dt><dd>An attribute has the format of <code>NAME : VALUE</code>, which means <code></code>: cannot be part of an attribute name or value. <br />
  Example: <div class="fragment"><div class="line"><span class="preprocessor">  # this is an example of kFormatColon conf file.</span></div><div class="line">first attribute name : first attribute value     # first attribute description</div><div class="line">  second attribute name : second attribute value</div><div class="line">third_attribute_name       # with an empty value</div></div><!-- fragment --> </dd></dl>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="a6d4d88c0c598a9ab97f1ef9f208c9960"></a>
