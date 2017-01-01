@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['readme',['README',['../md_marine_README.html',1,'']]],
   ['rbegin',['rbegin',['../classCCharBuffer.html#ae75f2e51a4f4a0e4ef40464d6982bab8',1,'CCharBuffer::rbegin()'],['../classCCharBuffer.html#a3831bc64d914c1ce9c8ab959b83ce505',1,'CCharBuffer::rbegin() const ']]],
   ['remove',['remove',['../classCAtomicHashTable.html#a22ca10d7fb29f09945b94859aa6bbf7b',1,'CAtomicHashTable']]],
   ['rend',['rend',['../classCCharBuffer.html#a633b18697ad02fd1e105a0b25116e44a',1,'CCharBuffer::rend()'],['../classCCharBuffer.html#a5a26d10a386f0ed6e51dbea5a80701fe',1,'CCharBuffer::rend() const ']]],
