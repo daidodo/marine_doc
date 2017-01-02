@@ -18,17 +18,17 @@ LIB_ENGINE := $(ENGINE_DIR)/libreaper.a
 
 ifeq ($(findstring release, $(MAKECMDGOALS)), release)
 CF_FLAGS := -DNDEBUG -O2
-CF_LIB :=
+LIB_GOAL := release
 else
 CF_FLAGS := -g
-CF_LIB :=
+LIB_GOAL := debug
 endif
 
 INCLUDE := $(MY_INCLUDE) -I$(MARINE_DIR) -I$(ENGINE_DIR)
 
 CXXFLAGS := $(MY_MACRO) $(CF_FLAGS) $(MY_FLAGS) -Wall -Werror -pthread $(INCLUDE)
 CFLAGS := $(CXXFLAGS)
-LIB := $(MY_LIBS) $(CF_LIB) -lprotobuf -lrt
+LIB := $(MY_LIBS) -lprotobuf -lrt
 PROTOC := protoc
 PROTOCFLAGS := --cpp_out=.
 
@@ -51,20 +51,17 @@ CFLAGS += -MD
 
 all: debug
 
-debug: reaper_debug $(TARGET)
+debug: $(TARGET)
 
-release: reaper_release $(TARGET)
+release: $(TARGET)
 
 proto: $(PB_CC_SRC)
 
-reaper_debug:
-	$(MAKE) -e -C $(ENGINE_DIR) debug
-
-reaper_release:
-	$(MAKE) -e -C $(ENGINE_DIR) release
-
 %_main: %_main.o $(OBJ) $(LIB_ENGINE)
 	$(CXX) $(CXXFLAGS) $^ $(LIB) -o $@
+
+$(LIB_ENGINE):
+	@$(MAKE) -e -C $(ENGINE_DIR) $(LIB_GOAL)
 
 clean:
 	$(RM) *.o *.d $(TARGET)
@@ -73,7 +70,7 @@ cleanall: clean reaper_clean
 	$(RM) tags *.log *.pb.h *.pb.cc
 
 reaper_clean:
-	$(MAKE) -C $(ENGINE_DIR) cleanall
+	@$(MAKE) -C $(ENGINE_DIR) cleanall
 
 %.pb.cc: %.proto
 	$(PROTOC) $(PROTOCFLAGS) $<
@@ -84,8 +81,6 @@ reaper_clean:
 
 ifneq ($(MAKECMDGOALS),clean)
 ifneq ($(MAKECMDGOALS),cleanall)
-ifneq ($(MAKECMDGOALS),hsha_clean)
 sinclude $(DEP)
-endif
 endif
 endif
