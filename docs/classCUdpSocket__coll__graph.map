@@ -1,5 +1,4 @@
 <map id="CUdpSocket" name="CUdpSocket">
-<area shape="rect" id="node2" href="$classCSocket.html" title="CSocket" alt="" coords="61,95,135,121"/>
-<area shape="rect" id="node3" href="$classIFileDesc.html" title="IFileDesc" alt="" coords="5,5,84,32"/>
-<area shape="rect" id="node4" href="$classCSockAddr.html" title="CSockAddr" alt="" coords="108,5,197,32"/>
+<area shape="rect" id="node2" href="$classISocket.html" title="ISocket" alt="" coords="21,80,87,107"/>
+<area shape="rect" id="node3" href="$classIFileDesc.html" title="Abstract interface of fd (file descriptor). " alt="" coords="15,5,93,32"/>
 </map>

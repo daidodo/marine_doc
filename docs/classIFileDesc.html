@@ -89,64 +89,76 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pub-static-attribs">Static Public Attributes</a> &#124;
-<a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="classIFileDesc-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">IFileDesc Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Abstract interface of fd (file descriptor).  
+ <a href="classIFileDesc.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="file_8hh_source.html">file.hh</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for IFileDesc:</div>
 <div class="dyncontent">
 <div class="center"><img src="classIFileDesc__inherit__graph.png" border="0" usemap="#IFileDesc_inherit__map" alt="Inheritance graph"/></div>
 <map name="IFileDesc_inherit__map" id="IFileDesc_inherit__map">
-<area shape="rect" id="node2" href="classCEpoll.html" title="Representation of epoll(7). " alt="" coords="5,80,67,107"/>
-<area shape="rect" id="node3" href="classCFile.html" title="CFile" alt="" coords="91,80,144,107"/>
-<area shape="rect" id="node5" href="classCSocket.html" title="CSocket" alt="" coords="263,80,337,107"/>
-<area shape="rect" id="node4" href="classCPosixShmFile.html" title="CPosixShmFile" alt="" coords="38,155,151,181"/>
-<area shape="rect" id="node6" href="classCListenSocket.html" title="CListenSocket" alt="" coords="175,155,283,181"/>
-<area shape="rect" id="node7" href="classCTcpConnSocket.html" title="CTcpConnSocket" alt="" coords="307,155,434,181"/>
-<area shape="rect" id="node8" href="classCUdpSocket.html" title="CUdpSocket" alt="" coords="458,155,555,181"/>
+<area shape="rect" id="node2" href="classCEpoll.html" title="Representation of epoll(7). " alt="" coords="46,80,107,107"/>
+<area shape="rect" id="node3" href="classCFile.html" title="CFile" alt="" coords="131,80,185,107"/>
+<area shape="rect" id="node5" href="classISocket.html" title="ISocket" alt="" coords="234,80,301,107"/>
+<area shape="rect" id="node4" href="classCPosixShmFile.html" title="CPosixShmFile" alt="" coords="5,155,119,181"/>
+<area shape="rect" id="node6" href="classCListenSocket.html" title="CListenSocket" alt="" coords="143,155,251,181"/>
+<area shape="rect" id="node7" href="classCTcpConnSocket.html" title="CTcpConnSocket" alt="" coords="275,155,401,181"/>
+<area shape="rect" id="node8" href="classCUdpSocket.html" title="CUdpSocket" alt="" coords="425,155,523,181"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a1a07ab4b2afb677ad4b9a3047d245ed0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1a07ab4b2afb677ad4b9a3047d245ed0"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>valid</b> () const </td></tr>
+<tr class="memitem:a1473d8cc040cde36cb7821f6a180364f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1473d8cc040cde36cb7821f6a180364f"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIFileDesc.html#a1473d8cc040cde36cb7821f6a180364f">IFileDesc</a> ()</td></tr>
+<tr class="memdesc:a1473d8cc040cde36cb7821f6a180364f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a default object. <br /></td></tr>
+<tr class="separator:a1473d8cc040cde36cb7821f6a180364f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66113fe3ab17ba8c9f133d411fd9af63"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIFileDesc.html#a66113fe3ab17ba8c9f133d411fd9af63">~IFileDesc</a> ()</td></tr>
+<tr class="memdesc:a66113fe3ab17ba8c9f133d411fd9af63"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy this object.  <a href="#a66113fe3ab17ba8c9f133d411fd9af63">More...</a><br /></td></tr>
+<tr class="separator:a66113fe3ab17ba8c9f133d411fd9af63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a07ab4b2afb677ad4b9a3047d245ed0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIFileDesc.html#a1a07ab4b2afb677ad4b9a3047d245ed0">valid</a> () const </td></tr>
+<tr class="memdesc:a1a07ab4b2afb677ad4b9a3047d245ed0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test if this object is a valid file descriptor.  <a href="#a1a07ab4b2afb677ad4b9a3047d245ed0">More...</a><br /></td></tr>
 <tr class="separator:a1a07ab4b2afb677ad4b9a3047d245ed0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af0acb53a33b4db6293c24ce0d546b40e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af0acb53a33b4db6293c24ce0d546b40e"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>fd</b> () const </td></tr>
+<tr class="memitem:af0acb53a33b4db6293c24ce0d546b40e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIFileDesc.html#af0acb53a33b4db6293c24ce0d546b40e">fd</a> () const </td></tr>
+<tr class="memdesc:af0acb53a33b4db6293c24ce0d546b40e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get fd (file descriptor).  <a href="#af0acb53a33b4db6293c24ce0d546b40e">More...</a><br /></td></tr>
 <tr class="separator:af0acb53a33b4db6293c24ce0d546b40e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae672489c32d8842275ed14f48f4113be"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae672489c32d8842275ed14f48f4113be"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>fdType</b> () const =0</td></tr>
+<tr class="memitem:ae672489c32d8842275ed14f48f4113be"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIFileDesc.html#ae672489c32d8842275ed14f48f4113be">fdType</a> () const =0</td></tr>
+<tr class="memdesc:ae672489c32d8842275ed14f48f4113be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get type id of this object.  <a href="#ae672489c32d8842275ed14f48f4113be">More...</a><br /></td></tr>
 <tr class="separator:ae672489c32d8842275ed14f48f4113be"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5057e91a67a7798254e6aa2274d179b5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5057e91a67a7798254e6aa2274d179b5"></a>
-virtual const char *&#160;</td><td class="memItemRight" valign="bottom"><b>fdTypeName</b> () const =0</td></tr>
+<tr class="memitem:a5057e91a67a7798254e6aa2274d179b5"><td class="memItemLeft" align="right" valign="top">virtual const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIFileDesc.html#a5057e91a67a7798254e6aa2274d179b5">fdTypeName</a> () const =0</td></tr>
+<tr class="memdesc:a5057e91a67a7798254e6aa2274d179b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get type name of this object.  <a href="#a5057e91a67a7798254e6aa2274d179b5">More...</a><br /></td></tr>
 <tr class="separator:a5057e91a67a7798254e6aa2274d179b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad7ecc1c5390e80fccaacd41e60b0b18d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad7ecc1c5390e80fccaacd41e60b0b18d"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>filename</b> () const </td></tr>
+<tr class="memitem:ad7ecc1c5390e80fccaacd41e60b0b18d"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIFileDesc.html#ad7ecc1c5390e80fccaacd41e60b0b18d">filename</a> () const </td></tr>
+<tr class="memdesc:ad7ecc1c5390e80fccaacd41e60b0b18d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get file name opened by this object.  <a href="#ad7ecc1c5390e80fccaacd41e60b0b18d">More...</a><br /></td></tr>
 <tr class="separator:ad7ecc1c5390e80fccaacd41e60b0b18d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af8df6960443bbf6b7da23a6408ba51a1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af8df6960443bbf6b7da23a6408ba51a1"></a>
-off_t&#160;</td><td class="memItemRight" valign="bottom"><b>length</b> () const </td></tr>
+<tr class="memitem:af8df6960443bbf6b7da23a6408ba51a1"><td class="memItemLeft" align="right" valign="top">off_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIFileDesc.html#af8df6960443bbf6b7da23a6408ba51a1">length</a> () const </td></tr>
+<tr class="memdesc:af8df6960443bbf6b7da23a6408ba51a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get byte size of file opened by this object.  <a href="#af8df6960443bbf6b7da23a6408ba51a1">More...</a><br /></td></tr>
 <tr class="separator:af8df6960443bbf6b7da23a6408ba51a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab57972808af065881d3b06b25bddb91e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab57972808af065881d3b06b25bddb91e"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>deleted</b> () const </td></tr>
+<tr class="memitem:ab57972808af065881d3b06b25bddb91e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIFileDesc.html#ab57972808af065881d3b06b25bddb91e">deleted</a> () const </td></tr>
+<tr class="memdesc:ab57972808af065881d3b06b25bddb91e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test if file is deleted.  <a href="#ab57972808af065881d3b06b25bddb91e">More...</a><br /></td></tr>
 <tr class="separator:ab57972808af065881d3b06b25bddb91e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad973d2f2256d6b01c82b83f235a9f76f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad973d2f2256d6b01c82b83f235a9f76f"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>block</b> (bool on)</td></tr>
+<tr class="memitem:ad973d2f2256d6b01c82b83f235a9f76f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIFileDesc.html#ad973d2f2256d6b01c82b83f235a9f76f">block</a> (bool on)</td></tr>
+<tr class="memdesc:ad973d2f2256d6b01c82b83f235a9f76f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set block/non-block for operations.  <a href="#ad973d2f2256d6b01c82b83f235a9f76f">More...</a><br /></td></tr>
 <tr class="separator:ad973d2f2256d6b01c82b83f235a9f76f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae980c856689faa4b997ae12dc0f1cfce"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae980c856689faa4b997ae12dc0f1cfce"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>close</b> ()</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIFileDesc.html#ae980c856689faa4b997ae12dc0f1cfce">close</a> ()</td></tr>
+<tr class="memdesc:ae980c856689faa4b997ae12dc0f1cfce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Close this fd. <br /></td></tr>
 <tr class="separator:ae980c856689faa4b997ae12dc0f1cfce"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa2acb4e2a9e238b798c903d633c2d6ba"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa2acb4e2a9e238b798c903d633c2d6ba"></a>
-virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><b>toString</b> () const </td></tr>
+<tr class="memitem:aa2acb4e2a9e238b798c903d633c2d6ba"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIFileDesc.html#aa2acb4e2a9e238b798c903d633c2d6ba">toString</a> () const </td></tr>
+<tr class="memdesc:aa2acb4e2a9e238b798c903d633c2d6ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get readable description of this object.  <a href="#aa2acb4e2a9e238b798c903d633c2d6ba">More...</a><br /></td></tr>
 <tr class="separator:aa2acb4e2a9e238b798c903d633c2d6ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a569dc2600ff319007c186c4698447241"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a569dc2600ff319007c186c4698447241"></a>
-static std::string&#160;</td><td class="memItemRight" valign="bottom"><b>ErrMsg</b> ()</td></tr>
+<tr class="memitem:a569dc2600ff319007c186c4698447241"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIFileDesc.html#a569dc2600ff319007c186c4698447241">ErrMsg</a> ()</td></tr>
+<tr class="memdesc:a569dc2600ff319007c186c4698447241"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get latest <code>errno</code> and error message.  <a href="#a569dc2600ff319007c186c4698447241">More...</a><br /></td></tr>
 <tr class="separator:a569dc2600ff319007c186c4698447241"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
@@ -154,13 +166,335 @@ Static Public Attributes</h2></td></tr>
 <tr class="memitem:a19c943b01c14b0d453fed7a5d26f729a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a19c943b01c14b0d453fed7a5d26f729a"></a>
 static const int&#160;</td><td class="memItemRight" valign="bottom"><b>kInvalidFd</b> = -1</td></tr>
 <tr class="separator:a19c943b01c14b0d453fed7a5d26f729a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
-Protected Attributes</h2></td></tr>
-<tr class="memitem:a4bcb0103e9d85065e432e6f88cf307b4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4bcb0103e9d85065e432e6f88cf307b4"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>fd_</b></td></tr>
-<tr class="separator:a4bcb0103e9d85065e432e6f88cf307b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Abstract interface of fd (file descriptor). </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a66113fe3ab17ba8c9f133d411fd9af63"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual IFileDesc::~IFileDesc </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Destroy this object. </p>
+<p>Release any resources if necessary. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="ad973d2f2256d6b01c82b83f235a9f76f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool IFileDesc::block </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>on</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set block/non-block for operations. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">on</td><td><ul>
+<li><code>true:</code> all IO operations will be <em>BLOCK</em> by default </li>
+<li><code>false:</code> all IO operations will be <em>NONBLOCK</em> by default </li>
+</ul>
+</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if succeeded; <code>false</code> otherwise </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ab57972808af065881d3b06b25bddb91e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool IFileDesc::deleted </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Test if file is deleted. </p>
+<p>A file could be removed even if you're reading or writing it. So it's necessary to test this status, or you may lost all changes to the file. </p><dl class="section return"><dt>Returns</dt><dd><code>true</code> if file is deleted; <code>false</code> otherwise </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a569dc2600ff319007c186c4698447241"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static std::string IFileDesc::ErrMsg </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get latest <code>errno</code> and error message. </p>
+<dl class="section return"><dt>Returns</dt><dd>Description of latest error </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="af0acb53a33b4db6293c24ce0d546b40e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int IFileDesc::fd </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get fd (file descriptor). </p>
+<dl class="section return"><dt>Returns</dt><dd>fd </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ae672489c32d8842275ed14f48f4113be"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int IFileDesc::fdType </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get type id of this object. </p>
+<p>Any concrete class derived from <a class="el" href="classIFileDesc.html" title="Abstract interface of fd (file descriptor). ">IFileDesc</a> must define a distinct type id named <code>kFdType</code>, so it's possible to check this id and determine what the object really is. <br />
+ Currently following <code>kFdType</code>s are defined: </p><table class="doxtable">
+<tr>
+<th align="right">Type Id </th><th>Value  </th></tr>
+<tr>
+<td align="right"><code><a class="el" href="classCFile.html#aa1292aacbcdcf5db7c7284ed78ad6063" title="type id ">CFile::kFdType</a></code> </td><td>1 </td></tr>
+<tr>
+<td align="right">CTcpConnSocket::kFdType </td><td>2 </td></tr>
+<tr>
+<td align="right">CListenSocket::kFdType </td><td>3 </td></tr>
+<tr>
+<td align="right">CUdpSocket::kFdType </td><td>4 </td></tr>
+<tr>
+<td align="right">CPosixShmFile::kFdType </td><td>5 </td></tr>
+<tr>
+<td align="right">CEpoll::kFdType </td><td>6 </td></tr>
+</table>
+<dl class="section return"><dt>Returns</dt><dd>Type id of this object </dd></dl>
+
+<p>Implemented in <a class="el" href="classCListenSocket.html#ab6fc22ae113b137e4c0cf4a79e3a48e7">CListenSocket</a>, <a class="el" href="classCTcpConnSocket.html#a7ed65a54a8225af2043b687a3c4c1d3e">CTcpConnSocket</a>, <a class="el" href="classCUdpSocket.html#ad7877363f92fa328ca3ce3997d0258b0">CUdpSocket</a>, <a class="el" href="classCFile.html#ac676348b83d3e529113e76dff43be4a8">CFile</a>, <a class="el" href="classCEpoll.html#a20b4f2125d2c65af2071c67433b91dc5">CEpoll</a>, and <a class="el" href="classCPosixShmFile.html#a15f1f6972b2ba340c5021c001d41c7a4">CPosixShmFile</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a5057e91a67a7798254e6aa2274d179b5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual const char* IFileDesc::fdTypeName </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get type name of this object. </p>
+<p>Any concrete class derived from <a class="el" href="classIFileDesc.html" title="Abstract interface of fd (file descriptor). ">IFileDesc</a> must give a readable name to identify itself. </p><dl class="section return"><dt>Returns</dt><dd>Readable type name </dd></dl>
+
+<p>Implemented in <a class="el" href="classCListenSocket.html#aea9ef0589b424e3f9e83f2217badf7a2">CListenSocket</a>, <a class="el" href="classCTcpConnSocket.html#aebb4444c03c881cc4294b165c749eb5c">CTcpConnSocket</a>, <a class="el" href="classCUdpSocket.html#a3bfba6e541a64e3a83c28061c45cb98e">CUdpSocket</a>, <a class="el" href="classCFile.html#a0f2228622f406d84e397fe4bc8cf7227">CFile</a>, <a class="el" href="classCEpoll.html#a703423cdf099a0eef056001471c14f7b">CEpoll</a>, and <a class="el" href="classCPosixShmFile.html#ae704806a4668bfcc1e534caa6e212da2">CPosixShmFile</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad7ecc1c5390e80fccaacd41e60b0b18d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string IFileDesc::filename </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get file name opened by this object. </p>
+<dl class="section return"><dt>Returns</dt><dd>A file name </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="af8df6960443bbf6b7da23a6408ba51a1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">off_t IFileDesc::length </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get byte size of file opened by this object. </p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li><code>-1</code>: Failed </li>
+<li>others: Byte size of file </li>
+</ul>
+</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aa2acb4e2a9e238b798c903d633c2d6ba"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::string IFileDesc::toString </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get readable description of this object. </p>
+<dl class="section return"><dt>Returns</dt><dd>Description string </dd></dl>
+
+<p>Reimplemented in <a class="el" href="classCFile.html#a6d4e503073148f75728cc884e1b0ac80">CFile</a>, <a class="el" href="classISocket.html#ad5aaba49c9217195b2f3962b695fd289">ISocket</a>, <a class="el" href="classCEpoll.html#a8b05f1323bc8c064eba6007973bcf160">CEpoll</a>, and <a class="el" href="classCPosixShmFile.html#aefbd98f7f198dee9dd8f47c9fbf1bc6c">CPosixShmFile</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a1a07ab4b2afb677ad4b9a3047d245ed0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool IFileDesc::valid </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Test if this object is a valid file descriptor. </p>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if it's valid; <code>false</code> otherwise </dd></dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li><a class="el" href="file_8hh_source.html">file.hh</a></li>
 </ul>

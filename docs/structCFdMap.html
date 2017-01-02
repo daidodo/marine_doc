@@ -93,6 +93,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">CFdMap&lt; T, Container &gt; Struct Template Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>A hash table for fd (file descriptor) related data.  
+ <a href="structCFdMap.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="fd__data__map_8hh_source.html">fd_data_map.hh</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
@@ -111,27 +116,211 @@ typedef const T &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>cons
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:afd8dc479696ad008b2ea5dd2622fc5e7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afd8dc479696ad008b2ea5dd2622fc5e7"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>CFdMap</b> (size_t capacity=100)</td></tr>
+<tr class="memitem:afd8dc479696ad008b2ea5dd2622fc5e7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structCFdMap.html#afd8dc479696ad008b2ea5dd2622fc5e7">CFdMap</a> (size_t <a class="el" href="structCFdMap.html#a26264adfd3dac4dc7e15b6d862cadc11">capacity</a>=100)</td></tr>
+<tr class="memdesc:afd8dc479696ad008b2ea5dd2622fc5e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize this object.  <a href="#afd8dc479696ad008b2ea5dd2622fc5e7">More...</a><br /></td></tr>
 <tr class="separator:afd8dc479696ad008b2ea5dd2622fc5e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a26264adfd3dac4dc7e15b6d862cadc11"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a26264adfd3dac4dc7e15b6d862cadc11"></a>
-size_t&#160;</td><td class="memItemRight" valign="bottom"><b>capacity</b> () const </td></tr>
+<tr class="memitem:a26264adfd3dac4dc7e15b6d862cadc11"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structCFdMap.html#a26264adfd3dac4dc7e15b6d862cadc11">capacity</a> () const </td></tr>
+<tr class="memdesc:a26264adfd3dac4dc7e15b6d862cadc11"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get current capacity.  <a href="#a26264adfd3dac4dc7e15b6d862cadc11">More...</a><br /></td></tr>
 <tr class="separator:a26264adfd3dac4dc7e15b6d862cadc11"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a260d7c5cc9c7f854e3c178abf49908f6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a260d7c5cc9c7f854e3c178abf49908f6"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>capacity</b> (size_t sz)</td></tr>
+<tr class="memitem:a260d7c5cc9c7f854e3c178abf49908f6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structCFdMap.html#a260d7c5cc9c7f854e3c178abf49908f6">capacity</a> (size_t sz)</td></tr>
+<tr class="memdesc:a260d7c5cc9c7f854e3c178abf49908f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set current capacity.  <a href="#a260d7c5cc9c7f854e3c178abf49908f6">More...</a><br /></td></tr>
 <tr class="separator:a260d7c5cc9c7f854e3c178abf49908f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1554386a214af01a6ad2baeecb4069af"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1554386a214af01a6ad2baeecb4069af"></a>
-reference&#160;</td><td class="memItemRight" valign="bottom"><b>operator[]</b> (int fd)</td></tr>
+<tr class="memitem:a1554386a214af01a6ad2baeecb4069af"><td class="memItemLeft" align="right" valign="top">reference&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structCFdMap.html#a1554386a214af01a6ad2baeecb4069af">operator[]</a> (int fd)</td></tr>
+<tr class="memdesc:a1554386a214af01a6ad2baeecb4069af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get value for an fd.  <a href="#a1554386a214af01a6ad2baeecb4069af">More...</a><br /></td></tr>
 <tr class="separator:a1554386a214af01a6ad2baeecb4069af"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a014d24f3a7384b4f300e197cab6088a4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a014d24f3a7384b4f300e197cab6088a4"></a>
-const_reference&#160;</td><td class="memItemRight" valign="bottom"><b>operator[]</b> (int fd) const </td></tr>
+<tr class="memitem:a014d24f3a7384b4f300e197cab6088a4"><td class="memItemLeft" align="right" valign="top">const_reference&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structCFdMap.html#a014d24f3a7384b4f300e197cab6088a4">operator[]</a> (int fd) const </td></tr>
+<tr class="memdesc:a014d24f3a7384b4f300e197cab6088a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get value for an fd.  <a href="#a014d24f3a7384b4f300e197cab6088a4">More...</a><br /></td></tr>
 <tr class="separator:a014d24f3a7384b4f300e197cab6088a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abe7ed32776dc50e6487301f9aaee40da"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abe7ed32776dc50e6487301f9aaee40da"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>clear</b> ()</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structCFdMap.html#abe7ed32776dc50e6487301f9aaee40da">clear</a> ()</td></tr>
+<tr class="memdesc:abe7ed32776dc50e6487301f9aaee40da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear all key/value pairs. <br /></td></tr>
 <tr class="separator:abe7ed32776dc50e6487301f9aaee40da"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><h3>template&lt;class T, class Container = std::vector&lt;T&gt;&gt;<br />
+struct CFdMap&lt; T, Container &gt;</h3>
+
+<p>A hash table for fd (file descriptor) related data. </p>
+<p>Key <em>MUST</em> be file descriptors, which are non-negative and of type <code>int</code>. In fact the file descriptor acts as an index to an underlying container of values. Because the number of files a process can open is limited, e.g. 1024 (it is modifiable), there's no chance for the underlying container to grow unexpectedly. So do <em>NOT</em> use <a class="el" href="structCFdMap.html" title="A hash table for fd (file descriptor) related data. ">CFdMap</a> as a generic <code>int</code> to value hash table. <br />
+ The underlying container is <code>vector</code> by default, but you can specify it as you like. </p><dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>Value type </td></tr>
+    <tr><td class="paramname">Container</td><td>Container type, default to <code>std::vector&lt;T&gt;</code> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd><a class="el" href="structCFdMap.html" title="A hash table for fd (file descriptor) related data. ">CFdMap</a> is <em>NOT</em> thread safe. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classCFdDataMap.html" title="Thread-safe hash table for fd (file descriptor) related data. ">CFdDataMap</a> </dd></dl>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="afd8dc479696ad008b2ea5dd2622fc5e7"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T, class Container = std::vector&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structCFdMap.html">CFdMap</a>&lt; T, Container &gt;::<a class="el" href="structCFdMap.html">CFdMap</a> </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>capacity</em> = <code>100</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Initialize this object. </p>
+<p><code>capacity</code> is used as a hint to the number of key/value pairs this object wants to hold. But <a class="el" href="structCFdMap.html" title="A hash table for fd (file descriptor) related data. ">CFdMap</a> is free to expand as needed. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">capacity</td><td>Initial reserved room for key/value pairs </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a26264adfd3dac4dc7e15b6d862cadc11"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T, class Container = std::vector&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t <a class="el" href="structCFdMap.html">CFdMap</a>&lt; T, Container &gt;::capacity </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get current capacity. </p>
+<dl class="section return"><dt>Returns</dt><dd>Current capacity </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a260d7c5cc9c7f854e3c178abf49908f6"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T, class Container = std::vector&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="structCFdMap.html">CFdMap</a>&lt; T, Container &gt;::capacity </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>sz</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set current capacity. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sz</td><td>New capacity </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a1554386a214af01a6ad2baeecb4069af"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T, class Container = std::vector&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">reference <a class="el" href="structCFdMap.html">CFdMap</a>&lt; T, Container &gt;::operator[] </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>fd</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get value for an fd. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fd</td><td>A file descriptor </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Writable reference to the value for <code>fd</code> </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a014d24f3a7384b4f300e197cab6088a4"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T, class Container = std::vector&lt;T&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const_reference <a class="el" href="structCFdMap.html">CFdMap</a>&lt; T, Container &gt;::operator[] </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>fd</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get value for an fd. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fd</td><td>A file descriptor </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Readonly reference to the value for <code>fd</code> </dd></dl>
+
+</div>
+</div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li><a class="el" href="fd__map_8hh_source.html">fd_map.hh</a></li>
+<li><a class="el" href="fd__data__map_8hh_source.html">fd_data_map.hh</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

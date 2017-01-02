@@ -1,13 +1,14 @@
 var searchData=
 [
   ['seek',['seek',['../classCInByteStream.html#aadd6632324760504000249749a38e879',1,'CInByteStream::seek()'],['../classCOutByteStreamBasic.html#a9dfbb25eb19adf3b3b40e29957d1fca8',1,'COutByteStreamBasic::seek()']]],
+  ['setdata',['setData',['../classCFdDataMap.html#a98b7c0bbe3ee4abc9f67623f66ecc546',1,'CFdDataMap']]],
   ['setintensity',['setIntensity',['../classCEncryptorAes.html#a6b820c5ca114e973f580554bcab94c4f',1,'CEncryptorAes']]],
   ['setkey',['setKey',['../classCEncryptorAes.html#a05ec121296168afa5a581aaa263202e6',1,'CEncryptorAes']]],
   ['setkeyandintensity',['setKeyAndIntensity',['../classCEncryptorAes.html#a9e212bae63106f9d34ee6f9a0976e881',1,'CEncryptorAes']]],
   ['setlevel',['setLevel',['../classCCompressorZlib.html#a4af9d9240ee11f03e26ae2997477a9fa',1,'CCompressorZlib']]],
   ['setsource',['setSource',['../classCInByteStream.html#a9d35dec62e832de7486386d187e54776',1,'CInByteStream::setSource(const char *buf, size_t sz, bool net=kByteOrderDefault)'],['../classCInByteStream.html#abf2dbb109f69dc88b241a72c11dbc3d9',1,'CInByteStream::setSource(const unsigned char *buf, size_t sz, bool net=kByteOrderDefault)'],['../classCInByteStream.html#a15c59e4960401d03425bd6051dd34a9a',1,'CInByteStream::setSource(const signed char *buf, size_t sz, bool net=kByteOrderDefault)'],['../classCInByteStream.html#a7f4b77e55ff51a3b461ba63ed00a5f9b',1,'CInByteStream::setSource(const std::string &amp;buf, bool net=kByteOrderDefault)']]],
   ['setvalue',['setValue',['../classCConsistentHash.html#a82de75f3894fd407e3ddeb42e7189694',1,'CConsistentHash']]],
-  ['size',['size',['../classCAtomicHashTable.html#aab5bad7de33ec9a0933561b9285d6bdc',1,'CAtomicHashTable::size()'],['../classCCharBuffer.html#a15e396e7316d367069e7a1a5c761ba47',1,'CCharBuffer::size()'],['../classCOutByteStreamBasic.html#aa5ebd0411bea97c24814d8044332d45e',1,'COutByteStreamBasic::size()'],['../classCEpoll.html#aa4cfca4e7fd67afa2234e634f300f9db',1,'CEpoll::size()']]],
+  ['size',['size',['../classCAtomicHashTable.html#aab5bad7de33ec9a0933561b9285d6bdc',1,'CAtomicHashTable::size()'],['../classCCharBuffer.html#a15e396e7316d367069e7a1a5c761ba47',1,'CCharBuffer::size()'],['../classCOutByteStreamBasic.html#aa5ebd0411bea97c24814d8044332d45e',1,'COutByteStreamBasic::size()'],['../classCEpoll.html#aa4cfca4e7fd67afa2234e634f300f9db',1,'CEpoll::size()'],['../classCFdDataMap.html#a41835fcdb54bf357029a5bc4eeb25f86',1,'CFdDataMap::size()']]],
   ['sizeofrow',['sizeOfRow',['../classCAtomicHashTable.html#a73ad5ed43a00c8d9efaa7fa51d14136e',1,'CAtomicHashTable']]],
   ['skip',['skip',['../classCInByteStream.html#a750421b7347d599a9bc69cde968186c4',1,'CInByteStream::skip()'],['../classCOutByteStreamBasic.html#a508228aafedd568248e321b86fd26c77',1,'COutByteStreamBasic::skip(ssize_t off)'],['../classCOutByteStreamBasic.html#aafcb5c566208dfd74b56a409c9d073c3',1,'COutByteStreamBasic::skip(ssize_t off, int fill)']]],
   ['status',['status',['../classCDataStreamBase.html#a86cb75f8158aff6670af50e7b1853361',1,'CDataStreamBase::status(int code)'],['../classCDataStreamBase.html#a967ee48c830edfe236f1131c391568a1',1,'CDataStreamBase::status() const ']]],

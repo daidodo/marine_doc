@@ -76,7 +76,6 @@ var searchData=
   ['csharedptr',['CSharedPtr',['../classCSharedPtr.html',1,'']]],
   ['csinglelist',['CSingleList',['../classCSingleList.html',1,'']]],
   ['csockaddr',['CSockAddr',['../classCSockAddr.html',1,'']]],
-  ['csocket',['CSocket',['../classCSocket.html',1,'']]],
   ['cspinlock',['CSpinLock',['../classCSpinLock.html',1,'']]],
   ['csysvshm',['CSysvShm',['../classCSysvShm.html',1,'']]],
   ['csysvshm_3c_20t_2c_20n_2c_20false_20_3e',['CSysvShm&lt; T, N, false &gt;',['../classCSysvShm_3_01T_00_01N_00_01false_01_4.html',1,'']]],

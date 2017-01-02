@@ -1,4 +1,4 @@
 <map id="CTcpConnSocket" name="CTcpConnSocket">
-<area shape="rect" id="node2" href="$classCSocket.html" title="CSocket" alt="" coords="32,80,105,107"/>
-<area shape="rect" id="node3" href="$classIFileDesc.html" title="IFileDesc" alt="" coords="29,5,108,32"/>
+<area shape="rect" id="node2" href="$classISocket.html" title="ISocket" alt="" coords="35,80,102,107"/>
+<area shape="rect" id="node3" href="$classIFileDesc.html" title="Abstract interface of fd (file descriptor). " alt="" coords="29,5,108,32"/>
 </map>

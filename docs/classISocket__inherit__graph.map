@@ -1,6 +1,6 @@
-<map id="CSocket" name="CSocket">
+<map id="ISocket" name="ISocket">
 <area shape="rect" id="node3" href="$classCListenSocket.html" title="CListenSocket" alt="" coords="5,155,113,181"/>
 <area shape="rect" id="node4" href="$classCTcpConnSocket.html" title="CTcpConnSocket" alt="" coords="137,155,264,181"/>
 <area shape="rect" id="node5" href="$classCUdpSocket.html" title="CUdpSocket" alt="" coords="288,155,385,181"/>
-<area shape="rect" id="node2" href="$classIFileDesc.html" title="IFileDesc" alt="" coords="161,5,240,32"/>
+<area shape="rect" id="node2" href="$classIFileDesc.html" title="Abstract interface of fd (file descriptor). " alt="" coords="161,5,240,32"/>
 </map>

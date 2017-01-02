@@ -93,6 +93,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">CFdDataMap&lt; T, LockT &gt; Class Template Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Thread-safe hash table for fd (file descriptor) related data.  
+ <a href="classCFdDataMap.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="fd__data__map_8hh_source.html">fd_data_map.hh</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
@@ -105,46 +110,523 @@ typedef <a class="el" href="classCSharedPtr.html">CSharedPtr</a>&lt; value_type 
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a0ca5b29256ab40aa0dbf584568f772d6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0ca5b29256ab40aa0dbf584568f772d6"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>CFdDataMap</b> (size_t capacity=100)</td></tr>
+<tr class="memitem:a0ca5b29256ab40aa0dbf584568f772d6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCFdDataMap.html#a0ca5b29256ab40aa0dbf584568f772d6">CFdDataMap</a> (size_t <a class="el" href="classCFdDataMap.html#a7b1434a0a149d858c7172a09626019f4">capacity</a>=100)</td></tr>
+<tr class="memdesc:a0ca5b29256ab40aa0dbf584568f772d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize this object.  <a href="#a0ca5b29256ab40aa0dbf584568f772d6">More...</a><br /></td></tr>
 <tr class="separator:a0ca5b29256ab40aa0dbf584568f772d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a41835fcdb54bf357029a5bc4eeb25f86"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a41835fcdb54bf357029a5bc4eeb25f86"></a>
-size_t&#160;</td><td class="memItemRight" valign="bottom"><b>size</b> () const </td></tr>
+<tr class="memitem:a41835fcdb54bf357029a5bc4eeb25f86"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCFdDataMap.html#a41835fcdb54bf357029a5bc4eeb25f86">size</a> () const </td></tr>
+<tr class="memdesc:a41835fcdb54bf357029a5bc4eeb25f86"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get number of key/value pairs.  <a href="#a41835fcdb54bf357029a5bc4eeb25f86">More...</a><br /></td></tr>
 <tr class="separator:a41835fcdb54bf357029a5bc4eeb25f86"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7b1434a0a149d858c7172a09626019f4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7b1434a0a149d858c7172a09626019f4"></a>
-size_t&#160;</td><td class="memItemRight" valign="bottom"><b>capacity</b> () const </td></tr>
+<tr class="memitem:a7b1434a0a149d858c7172a09626019f4"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCFdDataMap.html#a7b1434a0a149d858c7172a09626019f4">capacity</a> () const </td></tr>
+<tr class="memdesc:a7b1434a0a149d858c7172a09626019f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get current capacity.  <a href="#a7b1434a0a149d858c7172a09626019f4">More...</a><br /></td></tr>
 <tr class="separator:a7b1434a0a149d858c7172a09626019f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1ec3714f8f96414647c410eeed5d4244"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1ec3714f8f96414647c410eeed5d4244"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>capacity</b> (size_t c)</td></tr>
+<tr class="memitem:a1ec3714f8f96414647c410eeed5d4244"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCFdDataMap.html#a1ec3714f8f96414647c410eeed5d4244">capacity</a> (size_t c)</td></tr>
+<tr class="memdesc:a1ec3714f8f96414647c410eeed5d4244"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set current capacity.  <a href="#a1ec3714f8f96414647c410eeed5d4244">More...</a><br /></td></tr>
 <tr class="separator:a1ec3714f8f96414647c410eeed5d4244"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a98b7c0bbe3ee4abc9f67623f66ecc546"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a98b7c0bbe3ee4abc9f67623f66ecc546"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setData</b> (int fd, const <a class="el" href="classCSharedPtr.html">pointer</a> &amp;data, <a class="el" href="classCSharedPtr.html">pointer</a> *old=NULL)</td></tr>
+<tr class="memitem:a98b7c0bbe3ee4abc9f67623f66ecc546"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCFdDataMap.html#a98b7c0bbe3ee4abc9f67623f66ecc546">setData</a> (int fd, const <a class="el" href="classCSharedPtr.html">pointer</a> &amp;data, <a class="el" href="classCSharedPtr.html">pointer</a> *old=NULL)</td></tr>
+<tr class="memdesc:a98b7c0bbe3ee4abc9f67623f66ecc546"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set value for an fd.  <a href="#a98b7c0bbe3ee4abc9f67623f66ecc546">More...</a><br /></td></tr>
 <tr class="separator:a98b7c0bbe3ee4abc9f67623f66ecc546"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a852dcea888843e94866ceec0fc77c7c9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a852dcea888843e94866ceec0fc77c7c9"></a>
-<a class="el" href="classCSharedPtr.html">pointer</a>&#160;</td><td class="memItemRight" valign="bottom"><b>getData</b> (int fd) const </td></tr>
+<tr class="memitem:a852dcea888843e94866ceec0fc77c7c9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classCSharedPtr.html">pointer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCFdDataMap.html#a852dcea888843e94866ceec0fc77c7c9">getData</a> (int fd) const </td></tr>
+<tr class="memdesc:a852dcea888843e94866ceec0fc77c7c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get value for an fd.  <a href="#a852dcea888843e94866ceec0fc77c7c9">More...</a><br /></td></tr>
 <tr class="separator:a852dcea888843e94866ceec0fc77c7c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adebef8265a588568df13a525de756983"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adebef8265a588568df13a525de756983"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>getData</b> (int fd, <a class="el" href="classCSharedPtr.html">pointer</a> *data) const </td></tr>
+<tr class="memitem:adebef8265a588568df13a525de756983"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCFdDataMap.html#adebef8265a588568df13a525de756983">getData</a> (int fd, <a class="el" href="classCSharedPtr.html">pointer</a> *data) const </td></tr>
+<tr class="memdesc:adebef8265a588568df13a525de756983"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get value for an fd.  <a href="#adebef8265a588568df13a525de756983">More...</a><br /></td></tr>
 <tr class="separator:adebef8265a588568df13a525de756983"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a34fd04d7773082b781d9ef4c82b3cd45"><td class="memTemplParams" colspan="2"><a class="anchor" id="a34fd04d7773082b781d9ef4c82b3cd45"></a>
-template&lt;class ForwardIter , class OutputIter &gt; </td></tr>
-<tr class="memitem:a34fd04d7773082b781d9ef4c82b3cd45"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>getData</b> (ForwardIter first, ForwardIter last, OutputIter dstFirst) const </td></tr>
+<tr class="memitem:a34fd04d7773082b781d9ef4c82b3cd45"><td class="memTemplParams" colspan="2">template&lt;class ForwardIter , class OutputIter &gt; </td></tr>
+<tr class="memitem:a34fd04d7773082b781d9ef4c82b3cd45"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classCFdDataMap.html#a34fd04d7773082b781d9ef4c82b3cd45">getData</a> (ForwardIter first, ForwardIter last, OutputIter dstFirst) const </td></tr>
+<tr class="memdesc:a34fd04d7773082b781d9ef4c82b3cd45"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get values for some file descriptors.  <a href="#a34fd04d7773082b781d9ef4c82b3cd45">More...</a><br /></td></tr>
 <tr class="separator:a34fd04d7773082b781d9ef4c82b3cd45"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af52723a7c95cf6f2d6bca5ed74e81b69"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af52723a7c95cf6f2d6bca5ed74e81b69"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>clearData</b> (int fd, <a class="el" href="classCSharedPtr.html">pointer</a> *old=NULL)</td></tr>
+<tr class="memitem:af52723a7c95cf6f2d6bca5ed74e81b69"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCFdDataMap.html#af52723a7c95cf6f2d6bca5ed74e81b69">clearData</a> (int fd, <a class="el" href="classCSharedPtr.html">pointer</a> *old=NULL)</td></tr>
+<tr class="memdesc:af52723a7c95cf6f2d6bca5ed74e81b69"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove value for an fd.  <a href="#af52723a7c95cf6f2d6bca5ed74e81b69">More...</a><br /></td></tr>
 <tr class="separator:af52723a7c95cf6f2d6bca5ed74e81b69"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3e695f9cf43922e2be057d682f215e68"><td class="memTemplParams" colspan="2"><a class="anchor" id="a3e695f9cf43922e2be057d682f215e68"></a>
-template&lt;class ForwardIter &gt; </td></tr>
-<tr class="memitem:a3e695f9cf43922e2be057d682f215e68"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>clearData</b> (ForwardIter first, ForwardIter last)</td></tr>
+<tr class="memitem:a3e695f9cf43922e2be057d682f215e68"><td class="memTemplParams" colspan="2">template&lt;class ForwardIter &gt; </td></tr>
+<tr class="memitem:a3e695f9cf43922e2be057d682f215e68"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classCFdDataMap.html#a3e695f9cf43922e2be057d682f215e68">clearData</a> (ForwardIter first, ForwardIter last)</td></tr>
+<tr class="memdesc:a3e695f9cf43922e2be057d682f215e68"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove values for some file descriptors.  <a href="#a3e695f9cf43922e2be057d682f215e68">More...</a><br /></td></tr>
 <tr class="separator:a3e695f9cf43922e2be057d682f215e68"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab8353b28d1023fde050decfff0abc5f9"><td class="memTemplParams" colspan="2"><a class="anchor" id="ab8353b28d1023fde050decfff0abc5f9"></a>
-template&lt;class ForwardIter , class OutputIter &gt; </td></tr>
-<tr class="memitem:ab8353b28d1023fde050decfff0abc5f9"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>clearData</b> (ForwardIter first, ForwardIter last, OutputIter dstFirst)</td></tr>
+<tr class="memitem:ab8353b28d1023fde050decfff0abc5f9"><td class="memTemplParams" colspan="2">template&lt;class ForwardIter , class OutputIter &gt; </td></tr>
+<tr class="memitem:ab8353b28d1023fde050decfff0abc5f9"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classCFdDataMap.html#ab8353b28d1023fde050decfff0abc5f9">clearData</a> (ForwardIter first, ForwardIter last, OutputIter dstFirst)</td></tr>
+<tr class="memdesc:ab8353b28d1023fde050decfff0abc5f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove values for some file descriptors.  <a href="#ab8353b28d1023fde050decfff0abc5f9">More...</a><br /></td></tr>
 <tr class="separator:ab8353b28d1023fde050decfff0abc5f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8f03b5be87002c75d42ecf1a39444807"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8f03b5be87002c75d42ecf1a39444807"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>clear</b> ()</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCFdDataMap.html#a8f03b5be87002c75d42ecf1a39444807">clear</a> ()</td></tr>
+<tr class="memdesc:a8f03b5be87002c75d42ecf1a39444807"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear all key/value pairs. <br /></td></tr>
 <tr class="separator:a8f03b5be87002c75d42ecf1a39444807"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><h3>template&lt;class T, class LockT = CSpinLock&gt;<br />
+class CFdDataMap&lt; T, LockT &gt;</h3>
+
+<p>Thread-safe hash table for fd (file descriptor) related data. </p>
+<p>Key <em>MUST</em> be file descriptors, which are non-negative and of type <code>int</code>. In fact the file descriptor acts as an index to an underlying <code>vector</code> of values. Because the number of files a process can open is limited, e.g. 1024 (it is modifiable), there's no chance for the underlying <code>vector</code> to grow unexpectedly. So do <em>NOT</em> use <a class="el" href="classCFdDataMap.html" title="Thread-safe hash table for fd (file descriptor) related data. ">CFdDataMap</a> as a generic <code>int</code> to value hash table. <br />
+ Value can be of any type, even non-copyable types. Usually you want to keep a session for each socket fd, and the session is non-copyable. <a class="el" href="classCFdDataMap.html" title="Thread-safe hash table for fd (file descriptor) related data. ">CFdDataMap</a> uses smart pointer to hold a value, there are several advantages. Firstly, it avoids copying issue as mentioned; secondly, it simplifies lifetime control for each value among multiple threads; And finally, it is efficient for the underlying <code>vector</code> to expand. <br />
+ <a class="el" href="classCFdDataMap.html" title="Thread-safe hash table for fd (file descriptor) related data. ">CFdDataMap</a> is thread safe and implemented on top of <a class="el" href="structCFdMap.html" title="A hash table for fd (file descriptor) related data. ">CFdMap</a>. You can specify any lock type you want, as long as it cooperates with <a class="el" href="classCGuard.html">CGuard</a>. </p><dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>Value type </td></tr>
+    <tr><td class="paramname">LockT</td><td>Lock type, default to <a class="el" href="classCSpinLock.html">CSpinLock</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="structCFdMap.html" title="A hash table for fd (file descriptor) related data. ">CFdMap</a> </dd></dl>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a0ca5b29256ab40aa0dbf584568f772d6"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class LockT  = CSpinLock&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classCFdDataMap.html">CFdDataMap</a>&lt; T, LockT &gt;::<a class="el" href="classCFdDataMap.html">CFdDataMap</a> </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>capacity</em> = <code>100</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Initialize this object. </p>
+<p><code>capacity</code> is used as a hint to the number of key/value pairs this object wants to hold. But <a class="el" href="classCFdDataMap.html" title="Thread-safe hash table for fd (file descriptor) related data. ">CFdDataMap</a> is free to expand as needed. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">capacity</td><td>Initial reserved room for key/value pairs </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a7b1434a0a149d858c7172a09626019f4"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class LockT  = CSpinLock&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t <a class="el" href="classCFdDataMap.html">CFdDataMap</a>&lt; T, LockT &gt;::capacity </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get current capacity. </p>
+<dl class="section return"><dt>Returns</dt><dd>Current capacity </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a1ec3714f8f96414647c410eeed5d4244"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class LockT  = CSpinLock&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classCFdDataMap.html">CFdDataMap</a>&lt; T, LockT &gt;::capacity </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>c</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set current capacity. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">c</td><td>New capacity </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="af52723a7c95cf6f2d6bca5ed74e81b69"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class LockT  = CSpinLock&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classCFdDataMap.html">CFdDataMap</a>&lt; T, LockT &gt;::clearData </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>fd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classCSharedPtr.html">pointer</a> *&#160;</td>
+          <td class="paramname"><em>old</em> = <code>NULL</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Remove value for an fd. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">fd</td><td>A file descriptor </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">old</td><td>A smart pointer object to obtain old value for <code>fd</code>, or <code>NULL</code> if not interested </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a3e695f9cf43922e2be057d682f215e68"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class LockT  = CSpinLock&gt; </div>
+<div class="memtemplate">
+template&lt;class ForwardIter &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classCFdDataMap.html">CFdDataMap</a>&lt; T, LockT &gt;::clearData </td>
+          <td>(</td>
+          <td class="paramtype">ForwardIter&#160;</td>
+          <td class="paramname"><em>first</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ForwardIter&#160;</td>
+          <td class="paramname"><em>last</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Remove values for some file descriptors. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">first</td><td>Begin iterator for a collection of file descriptors </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">last</td><td>End iterator for a collection of file descriptors </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ab8353b28d1023fde050decfff0abc5f9"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class LockT  = CSpinLock&gt; </div>
+<div class="memtemplate">
+template&lt;class ForwardIter , class OutputIter &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classCFdDataMap.html">CFdDataMap</a>&lt; T, LockT &gt;::clearData </td>
+          <td>(</td>
+          <td class="paramtype">ForwardIter&#160;</td>
+          <td class="paramname"><em>first</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ForwardIter&#160;</td>
+          <td class="paramname"><em>last</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">OutputIter&#160;</td>
+          <td class="paramname"><em>dstFirst</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Remove values for some file descriptors. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">first</td><td>Begin iterator for a collection of file descriptors </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">last</td><td>End iterator for a collection of file descriptors </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">dstFirst</td><td>Begin iterator for a collection of smart pointers to receive old values </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>The size and validation of destination collection is guaranteed by the user. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a852dcea888843e94866ceec0fc77c7c9"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class LockT  = CSpinLock&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classCSharedPtr.html">pointer</a> <a class="el" href="classCFdDataMap.html">CFdDataMap</a>&lt; T, LockT &gt;::getData </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>fd</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get value for an fd. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fd</td><td>A file descriptor </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A smart pointer object hold the value for <code>fd</code> </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="adebef8265a588568df13a525de756983"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class LockT  = CSpinLock&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classCFdDataMap.html">CFdDataMap</a>&lt; T, LockT &gt;::getData </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>fd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classCSharedPtr.html">pointer</a> *&#160;</td>
+          <td class="paramname"><em>data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get value for an fd. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">fd</td><td>A file descriptor </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">data</td><td>A smart pointer object to obtain the value for <code>fd</code> </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a34fd04d7773082b781d9ef4c82b3cd45"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class LockT  = CSpinLock&gt; </div>
+<div class="memtemplate">
+template&lt;class ForwardIter , class OutputIter &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classCFdDataMap.html">CFdDataMap</a>&lt; T, LockT &gt;::getData </td>
+          <td>(</td>
+          <td class="paramtype">ForwardIter&#160;</td>
+          <td class="paramname"><em>first</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ForwardIter&#160;</td>
+          <td class="paramname"><em>last</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">OutputIter&#160;</td>
+          <td class="paramname"><em>dstFirst</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get values for some file descriptors. </p>
+<p>This function saves many lock/unlock operations. <br />
+ Example code: </p><div class="fragment"><div class="line"><a class="code" href="classCFdDataMap.html">CFdDataMap&lt;Data&gt;</a> fdmap;</div><div class="line"></div><div class="line">vector&lt;int&gt; fds;</div><div class="line">vector&lt;CFdDataMap&lt;Data&gt;::pointer&gt; values(fds.size());</div><div class="line"></div><div class="line">fdmap.<a class="code" href="classCFdDataMap.html#a852dcea888843e94866ceec0fc77c7c9">getData</a>(fds.begin(), fds.end(), values.begin());</div></div><!-- fragment --> <dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">first</td><td>Begin iterator for a collection of file descriptors </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">last</td><td>End iterator for a collection of file descriptors </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">dstFirst</td><td>Begin iterator for a collection of smart pointers to receive the values of file descriptors </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>The size and validation of destination collection is guaranteed by the user. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a98b7c0bbe3ee4abc9f67623f66ecc546"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T, class LockT = CSpinLock&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classCFdDataMap.html">CFdDataMap</a>&lt; T, LockT &gt;::setData </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>fd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classCSharedPtr.html">pointer</a> &amp;&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classCSharedPtr.html">pointer</a> *&#160;</td>
+          <td class="paramname"><em>old</em> = <code>NULL</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set value for an fd. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">fd</td><td>A file descriptor </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">data</td><td>New value for <code>fd</code> </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">old</td><td>A smart pointer object to obtain old value for <code>fd</code> </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a41835fcdb54bf357029a5bc4eeb25f86"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T, class LockT = CSpinLock&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t <a class="el" href="classCFdDataMap.html">CFdDataMap</a>&lt; T, LockT &gt;::size </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get number of key/value pairs. </p>
+<dl class="section return"><dt>Returns</dt><dd>Number of key/value pairs </dd></dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li><a class="el" href="fd__data__map_8hh_source.html">fd_data_map.hh</a></li>
 </ul>

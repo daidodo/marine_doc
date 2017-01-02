@@ -98,8 +98,8 @@ Inheritance diagram for CUdpSocket:</div>
 <div class="dyncontent">
 <div class="center"><img src="classCUdpSocket__inherit__graph.png" border="0" usemap="#CUdpSocket_inherit__map" alt="Inheritance graph"/></div>
 <map name="CUdpSocket_inherit__map" id="CUdpSocket_inherit__map">
-<area shape="rect" id="node2" href="classCSocket.html" title="CSocket" alt="" coords="17,80,91,107"/>
-<area shape="rect" id="node3" href="classIFileDesc.html" title="IFileDesc" alt="" coords="15,5,93,32"/>
+<area shape="rect" id="node2" href="classISocket.html" title="ISocket" alt="" coords="21,80,87,107"/>
+<area shape="rect" id="node3" href="classIFileDesc.html" title="Abstract interface of fd (file descriptor). " alt="" coords="15,5,93,32"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
@@ -107,9 +107,8 @@ Collaboration diagram for CUdpSocket:</div>
 <div class="dyncontent">
 <div class="center"><img src="classCUdpSocket__coll__graph.png" border="0" usemap="#CUdpSocket_coll__map" alt="Collaboration graph"/></div>
 <map name="CUdpSocket_coll__map" id="CUdpSocket_coll__map">
-<area shape="rect" id="node2" href="classCSocket.html" title="CSocket" alt="" coords="61,95,135,121"/>
-<area shape="rect" id="node3" href="classIFileDesc.html" title="IFileDesc" alt="" coords="5,5,84,32"/>
-<area shape="rect" id="node4" href="classCSockAddr.html" title="CSockAddr" alt="" coords="108,5,197,32"/>
+<area shape="rect" id="node2" href="classISocket.html" title="ISocket" alt="" coords="21,80,87,107"/>
+<area shape="rect" id="node3" href="classIFileDesc.html" title="Abstract interface of fd (file descriptor). " alt="" coords="15,5,93,32"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -121,11 +120,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a7d507a32c5de179a9127e843770f48bc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7d507a32c5de179a9127e843770f48bc"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>getSock</b> (int family)</td></tr>
 <tr class="separator:a7d507a32c5de179a9127e843770f48bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad7877363f92fa328ca3ce3997d0258b0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad7877363f92fa328ca3ce3997d0258b0"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>fdType</b> () const </td></tr>
+<tr class="memitem:ad7877363f92fa328ca3ce3997d0258b0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCUdpSocket.html#ad7877363f92fa328ca3ce3997d0258b0">fdType</a> () const </td></tr>
+<tr class="memdesc:ad7877363f92fa328ca3ce3997d0258b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get type id of this object.  <a href="#ad7877363f92fa328ca3ce3997d0258b0">More...</a><br /></td></tr>
 <tr class="separator:ad7877363f92fa328ca3ce3997d0258b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3bfba6e541a64e3a83c28061c45cb98e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3bfba6e541a64e3a83c28061c45cb98e"></a>
-const char *&#160;</td><td class="memItemRight" valign="bottom"><b>fdTypeName</b> () const </td></tr>
+<tr class="memitem:a3bfba6e541a64e3a83c28061c45cb98e"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCUdpSocket.html#a3bfba6e541a64e3a83c28061c45cb98e">fdTypeName</a> () const </td></tr>
+<tr class="memdesc:a3bfba6e541a64e3a83c28061c45cb98e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get type name of this object.  <a href="#a3bfba6e541a64e3a83c28061c45cb98e">More...</a><br /></td></tr>
 <tr class="separator:a3bfba6e541a64e3a83c28061c45cb98e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a947659016c2d9c6205486fa2daf67f00"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a947659016c2d9c6205486fa2daf67f00"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>bindAddr</b> (const <a class="el" href="classCSockAddr.html">CSockAddr</a> &amp;addr)</td></tr>
@@ -147,81 +146,89 @@ ssize_t&#160;</td><td class="memItemRight" valign="bottom"><b>sendData</b> (cons
 template&lt;class BufT &gt; </td></tr>
 <tr class="memitem:a5d76307583b7d85f3aca312f69e9bba9"><td class="memTemplItemLeft" align="right" valign="top">ssize_t&#160;</td><td class="memTemplItemRight" valign="bottom"><b>sendData</b> (const <a class="el" href="classCSockAddr.html">CSockAddr</a> &amp;to, const BufT &amp;buf)</td></tr>
 <tr class="separator:a5d76307583b7d85f3aca312f69e9bba9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_methods_classCSocket"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classCSocket')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classCSocket.html">CSocket</a></td></tr>
-<tr class="memitem:af77868f901ccd4399be57995c0db9a6f inherit pub_methods_classCSocket"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af77868f901ccd4399be57995c0db9a6f"></a>
+<tr class="inherit_header pub_methods_classISocket"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classISocket')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classISocket.html">ISocket</a></td></tr>
+<tr class="memitem:af40d8885f256d6f0b9d7a631e2b296d5 inherit pub_methods_classISocket"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af40d8885f256d6f0b9d7a631e2b296d5"></a>
 <a class="el" href="classCSockAddr.html">CSockAddr</a>&#160;</td><td class="memItemRight" valign="bottom"><b>hostAddr</b> () const </td></tr>
-<tr class="separator:af77868f901ccd4399be57995c0db9a6f inherit pub_methods_classCSocket"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad9b926e513bf7dce55c8a91af77bf08e inherit pub_methods_classCSocket"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad9b926e513bf7dce55c8a91af77bf08e"></a>
+<tr class="separator:af40d8885f256d6f0b9d7a631e2b296d5 inherit pub_methods_classISocket"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1b6a99dc138f438fdc680ff33206c70 inherit pub_methods_classISocket"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa1b6a99dc138f438fdc680ff33206c70"></a>
 const <a class="el" href="classCSockAddr.html">CSockAddr</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>peerAddr</b> () const </td></tr>
-<tr class="separator:ad9b926e513bf7dce55c8a91af77bf08e inherit pub_methods_classCSocket"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a895f54c8bc951ad987c0153ab2793217 inherit pub_methods_classCSocket"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a895f54c8bc951ad987c0153ab2793217"></a>
+<tr class="separator:aa1b6a99dc138f438fdc680ff33206c70 inherit pub_methods_classISocket"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4df80143498d4274c4b4b4a56c70c59a inherit pub_methods_classISocket"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4df80143498d4274c4b4b4a56c70c59a"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>linger</b> (bool on, int timeoutS=0)</td></tr>
-<tr class="separator:a895f54c8bc951ad987c0153ab2793217 inherit pub_methods_classCSocket"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afdb1db2d4051210fd8a9bf36d966f595 inherit pub_methods_classCSocket"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afdb1db2d4051210fd8a9bf36d966f595"></a>
+<tr class="separator:a4df80143498d4274c4b4b4a56c70c59a inherit pub_methods_classISocket"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a046e76677dbbbafa4edeee2eab53459f inherit pub_methods_classISocket"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a046e76677dbbbafa4edeee2eab53459f"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>reuseAddr</b> (bool on)</td></tr>
-<tr class="separator:afdb1db2d4051210fd8a9bf36d966f595 inherit pub_methods_classCSocket"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa1c192279bfe87d69d5a15145df54f54 inherit pub_methods_classCSocket"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa1c192279bfe87d69d5a15145df54f54"></a>
+<tr class="separator:a046e76677dbbbafa4edeee2eab53459f inherit pub_methods_classISocket"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b641a773c71914f750c8c6dbcd4dfbc inherit pub_methods_classISocket"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1b641a773c71914f750c8c6dbcd4dfbc"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>recvTimeout</b> (int timeMs)</td></tr>
-<tr class="separator:aa1c192279bfe87d69d5a15145df54f54 inherit pub_methods_classCSocket"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0abc4c92aa27332d7c2aafd82040350e inherit pub_methods_classCSocket"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0abc4c92aa27332d7c2aafd82040350e"></a>
+<tr class="separator:a1b641a773c71914f750c8c6dbcd4dfbc inherit pub_methods_classISocket"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a820e9ab67945579fd27df500ebf6cd40 inherit pub_methods_classISocket"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a820e9ab67945579fd27df500ebf6cd40"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>recvTimeout</b> () const </td></tr>
-<tr class="separator:a0abc4c92aa27332d7c2aafd82040350e inherit pub_methods_classCSocket"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9239b74d42654ec23f9c12c029898ac7 inherit pub_methods_classCSocket"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9239b74d42654ec23f9c12c029898ac7"></a>
+<tr class="separator:a820e9ab67945579fd27df500ebf6cd40 inherit pub_methods_classISocket"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8eaecac901d5de307c35cec6ab2f5fc2 inherit pub_methods_classISocket"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8eaecac901d5de307c35cec6ab2f5fc2"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>sendTimeout</b> (uint32_t timeMs)</td></tr>
-<tr class="separator:a9239b74d42654ec23f9c12c029898ac7 inherit pub_methods_classCSocket"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5e4d08c9b66d20d175b524990733cff5 inherit pub_methods_classCSocket"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5e4d08c9b66d20d175b524990733cff5"></a>
+<tr class="separator:a8eaecac901d5de307c35cec6ab2f5fc2 inherit pub_methods_classISocket"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5b2760b537c95523b26417fc768c02d inherit pub_methods_classISocket"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac5b2760b537c95523b26417fc768c02d"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>sendTimeout</b> () const </td></tr>
-<tr class="separator:a5e4d08c9b66d20d175b524990733cff5 inherit pub_methods_classCSocket"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a01736bb9d2ab917d04b2232a82adceee inherit pub_methods_classCSocket"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a01736bb9d2ab917d04b2232a82adceee"></a>
+<tr class="separator:ac5b2760b537c95523b26417fc768c02d inherit pub_methods_classISocket"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa674a19ccb8e802d9a1941fd4a3cac6b inherit pub_methods_classISocket"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa674a19ccb8e802d9a1941fd4a3cac6b"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>recvBufSize</b> (int size)</td></tr>
-<tr class="separator:a01736bb9d2ab917d04b2232a82adceee inherit pub_methods_classCSocket"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acbdaeab01f3f065a21ab0b4a1baf664c inherit pub_methods_classCSocket"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acbdaeab01f3f065a21ab0b4a1baf664c"></a>
+<tr class="separator:aa674a19ccb8e802d9a1941fd4a3cac6b inherit pub_methods_classISocket"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ebbe2e2d371240136c1aa3d6f569b12 inherit pub_methods_classISocket"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6ebbe2e2d371240136c1aa3d6f569b12"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>recvBufSize</b> () const </td></tr>
-<tr class="separator:acbdaeab01f3f065a21ab0b4a1baf664c inherit pub_methods_classCSocket"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8961c9b337338cae172557e21d50c58b inherit pub_methods_classCSocket"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8961c9b337338cae172557e21d50c58b"></a>
+<tr class="separator:a6ebbe2e2d371240136c1aa3d6f569b12 inherit pub_methods_classISocket"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abab05759377292753bda4d528c8cd784 inherit pub_methods_classISocket"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abab05759377292753bda4d528c8cd784"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>sendBufSize</b> (int size)</td></tr>
-<tr class="separator:a8961c9b337338cae172557e21d50c58b inherit pub_methods_classCSocket"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af015d6b2793a91d292ab27de94d16d8d inherit pub_methods_classCSocket"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af015d6b2793a91d292ab27de94d16d8d"></a>
+<tr class="separator:abab05759377292753bda4d528c8cd784 inherit pub_methods_classISocket"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad78a760fd78f57c2cb63aebc7dc84095 inherit pub_methods_classISocket"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad78a760fd78f57c2cb63aebc7dc84095"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>sendBufSize</b> () const </td></tr>
-<tr class="separator:af015d6b2793a91d292ab27de94d16d8d inherit pub_methods_classCSocket"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5e3512179b0d7482311a1386b4e1633f inherit pub_methods_classCSocket"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5e3512179b0d7482311a1386b4e1633f"></a>
+<tr class="separator:ad78a760fd78f57c2cb63aebc7dc84095 inherit pub_methods_classISocket"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09c1fd226a9ee0477c62821f0f148b56 inherit pub_methods_classISocket"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a09c1fd226a9ee0477c62821f0f148b56"></a>
 ssize_t&#160;</td><td class="memItemRight" valign="bottom"><b>recvData</b> (char *buf, size_t sz, bool waitAll=false)</td></tr>
-<tr class="separator:a5e3512179b0d7482311a1386b4e1633f inherit pub_methods_classCSocket"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acb149904f28f40725bd369cabe45d467 inherit pub_methods_classCSocket"><td class="memTemplParams" colspan="2"><a class="anchor" id="acb149904f28f40725bd369cabe45d467"></a>
+<tr class="separator:a09c1fd226a9ee0477c62821f0f148b56 inherit pub_methods_classISocket"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e3f168729f3dd5c41c4e8348dc13454 inherit pub_methods_classISocket"><td class="memTemplParams" colspan="2"><a class="anchor" id="a6e3f168729f3dd5c41c4e8348dc13454"></a>
 template&lt;class BufT &gt; </td></tr>
-<tr class="memitem:acb149904f28f40725bd369cabe45d467 inherit pub_methods_classCSocket"><td class="memTemplItemLeft" align="right" valign="top">ssize_t&#160;</td><td class="memTemplItemRight" valign="bottom"><b>recvData</b> (BufT &amp;buf, size_t sz, bool waitAll=false)</td></tr>
-<tr class="separator:acb149904f28f40725bd369cabe45d467 inherit pub_methods_classCSocket"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab030e9f67f67f3b5950a44d6c3052eda inherit pub_methods_classCSocket"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab030e9f67f67f3b5950a44d6c3052eda"></a>
+<tr class="memitem:a6e3f168729f3dd5c41c4e8348dc13454 inherit pub_methods_classISocket"><td class="memTemplItemLeft" align="right" valign="top">ssize_t&#160;</td><td class="memTemplItemRight" valign="bottom"><b>recvData</b> (BufT &amp;buf, size_t sz, bool waitAll=false)</td></tr>
+<tr class="separator:a6e3f168729f3dd5c41c4e8348dc13454 inherit pub_methods_classISocket"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25529ae035ec6776bbf281dd1affccc2 inherit pub_methods_classISocket"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a25529ae035ec6776bbf281dd1affccc2"></a>
 ssize_t&#160;</td><td class="memItemRight" valign="bottom"><b>sendData</b> (const char *buf, size_t sz)</td></tr>
-<tr class="separator:ab030e9f67f67f3b5950a44d6c3052eda inherit pub_methods_classCSocket"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3527e3bb8dae6f06c8a5fb29739449ea inherit pub_methods_classCSocket"><td class="memTemplParams" colspan="2"><a class="anchor" id="a3527e3bb8dae6f06c8a5fb29739449ea"></a>
+<tr class="separator:a25529ae035ec6776bbf281dd1affccc2 inherit pub_methods_classISocket"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a065d99d23a327877ac3b0c50530f7bd2 inherit pub_methods_classISocket"><td class="memTemplParams" colspan="2"><a class="anchor" id="a065d99d23a327877ac3b0c50530f7bd2"></a>
 template&lt;class BufT &gt; </td></tr>
-<tr class="memitem:a3527e3bb8dae6f06c8a5fb29739449ea inherit pub_methods_classCSocket"><td class="memTemplItemLeft" align="right" valign="top">ssize_t&#160;</td><td class="memTemplItemRight" valign="bottom"><b>sendData</b> (const BufT &amp;buf)</td></tr>
-<tr class="separator:a3527e3bb8dae6f06c8a5fb29739449ea inherit pub_methods_classCSocket"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a37b642c4b1acbafc5a53cef70bf96aa3 inherit pub_methods_classCSocket"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a37b642c4b1acbafc5a53cef70bf96aa3"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>toString</b> () const </td></tr>
-<tr class="separator:a37b642c4b1acbafc5a53cef70bf96aa3 inherit pub_methods_classCSocket"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a065d99d23a327877ac3b0c50530f7bd2 inherit pub_methods_classISocket"><td class="memTemplItemLeft" align="right" valign="top">ssize_t&#160;</td><td class="memTemplItemRight" valign="bottom"><b>sendData</b> (const BufT &amp;buf)</td></tr>
+<tr class="separator:a065d99d23a327877ac3b0c50530f7bd2 inherit pub_methods_classISocket"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5aaba49c9217195b2f3962b695fd289 inherit pub_methods_classISocket"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classISocket.html#ad5aaba49c9217195b2f3962b695fd289">toString</a> () const </td></tr>
+<tr class="memdesc:ad5aaba49c9217195b2f3962b695fd289 inherit pub_methods_classISocket"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get readable description of this object.  <a href="#ad5aaba49c9217195b2f3962b695fd289">More...</a><br /></td></tr>
+<tr class="separator:ad5aaba49c9217195b2f3962b695fd289 inherit pub_methods_classISocket"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classIFileDesc"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classIFileDesc')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classIFileDesc.html">IFileDesc</a></td></tr>
-<tr class="memitem:a1a07ab4b2afb677ad4b9a3047d245ed0 inherit pub_methods_classIFileDesc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1a07ab4b2afb677ad4b9a3047d245ed0"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>valid</b> () const </td></tr>
+<tr class="memitem:a1473d8cc040cde36cb7821f6a180364f inherit pub_methods_classIFileDesc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1473d8cc040cde36cb7821f6a180364f"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIFileDesc.html#a1473d8cc040cde36cb7821f6a180364f">IFileDesc</a> ()</td></tr>
+<tr class="memdesc:a1473d8cc040cde36cb7821f6a180364f inherit pub_methods_classIFileDesc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a default object. <br /></td></tr>
+<tr class="separator:a1473d8cc040cde36cb7821f6a180364f inherit pub_methods_classIFileDesc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66113fe3ab17ba8c9f133d411fd9af63 inherit pub_methods_classIFileDesc"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIFileDesc.html#a66113fe3ab17ba8c9f133d411fd9af63">~IFileDesc</a> ()</td></tr>
+<tr class="memdesc:a66113fe3ab17ba8c9f133d411fd9af63 inherit pub_methods_classIFileDesc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy this object.  <a href="#a66113fe3ab17ba8c9f133d411fd9af63">More...</a><br /></td></tr>
+<tr class="separator:a66113fe3ab17ba8c9f133d411fd9af63 inherit pub_methods_classIFileDesc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a07ab4b2afb677ad4b9a3047d245ed0 inherit pub_methods_classIFileDesc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIFileDesc.html#a1a07ab4b2afb677ad4b9a3047d245ed0">valid</a> () const </td></tr>
+<tr class="memdesc:a1a07ab4b2afb677ad4b9a3047d245ed0 inherit pub_methods_classIFileDesc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test if this object is a valid file descriptor.  <a href="#a1a07ab4b2afb677ad4b9a3047d245ed0">More...</a><br /></td></tr>
 <tr class="separator:a1a07ab4b2afb677ad4b9a3047d245ed0 inherit pub_methods_classIFileDesc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af0acb53a33b4db6293c24ce0d546b40e inherit pub_methods_classIFileDesc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af0acb53a33b4db6293c24ce0d546b40e"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>fd</b> () const </td></tr>
+<tr class="memitem:af0acb53a33b4db6293c24ce0d546b40e inherit pub_methods_classIFileDesc"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIFileDesc.html#af0acb53a33b4db6293c24ce0d546b40e">fd</a> () const </td></tr>
+<tr class="memdesc:af0acb53a33b4db6293c24ce0d546b40e inherit pub_methods_classIFileDesc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get fd (file descriptor).  <a href="#af0acb53a33b4db6293c24ce0d546b40e">More...</a><br /></td></tr>
 <tr class="separator:af0acb53a33b4db6293c24ce0d546b40e inherit pub_methods_classIFileDesc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad7ecc1c5390e80fccaacd41e60b0b18d inherit pub_methods_classIFileDesc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad7ecc1c5390e80fccaacd41e60b0b18d"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>filename</b> () const </td></tr>
+<tr class="memitem:ad7ecc1c5390e80fccaacd41e60b0b18d inherit pub_methods_classIFileDesc"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIFileDesc.html#ad7ecc1c5390e80fccaacd41e60b0b18d">filename</a> () const </td></tr>
+<tr class="memdesc:ad7ecc1c5390e80fccaacd41e60b0b18d inherit pub_methods_classIFileDesc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get file name opened by this object.  <a href="#ad7ecc1c5390e80fccaacd41e60b0b18d">More...</a><br /></td></tr>
 <tr class="separator:ad7ecc1c5390e80fccaacd41e60b0b18d inherit pub_methods_classIFileDesc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af8df6960443bbf6b7da23a6408ba51a1 inherit pub_methods_classIFileDesc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af8df6960443bbf6b7da23a6408ba51a1"></a>
-off_t&#160;</td><td class="memItemRight" valign="bottom"><b>length</b> () const </td></tr>
+<tr class="memitem:af8df6960443bbf6b7da23a6408ba51a1 inherit pub_methods_classIFileDesc"><td class="memItemLeft" align="right" valign="top">off_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIFileDesc.html#af8df6960443bbf6b7da23a6408ba51a1">length</a> () const </td></tr>
+<tr class="memdesc:af8df6960443bbf6b7da23a6408ba51a1 inherit pub_methods_classIFileDesc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get byte size of file opened by this object.  <a href="#af8df6960443bbf6b7da23a6408ba51a1">More...</a><br /></td></tr>
 <tr class="separator:af8df6960443bbf6b7da23a6408ba51a1 inherit pub_methods_classIFileDesc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab57972808af065881d3b06b25bddb91e inherit pub_methods_classIFileDesc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab57972808af065881d3b06b25bddb91e"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>deleted</b> () const </td></tr>
+<tr class="memitem:ab57972808af065881d3b06b25bddb91e inherit pub_methods_classIFileDesc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIFileDesc.html#ab57972808af065881d3b06b25bddb91e">deleted</a> () const </td></tr>
+<tr class="memdesc:ab57972808af065881d3b06b25bddb91e inherit pub_methods_classIFileDesc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test if file is deleted.  <a href="#ab57972808af065881d3b06b25bddb91e">More...</a><br /></td></tr>
 <tr class="separator:ab57972808af065881d3b06b25bddb91e inherit pub_methods_classIFileDesc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad973d2f2256d6b01c82b83f235a9f76f inherit pub_methods_classIFileDesc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad973d2f2256d6b01c82b83f235a9f76f"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>block</b> (bool on)</td></tr>
+<tr class="memitem:ad973d2f2256d6b01c82b83f235a9f76f inherit pub_methods_classIFileDesc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIFileDesc.html#ad973d2f2256d6b01c82b83f235a9f76f">block</a> (bool on)</td></tr>
+<tr class="memdesc:ad973d2f2256d6b01c82b83f235a9f76f inherit pub_methods_classIFileDesc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set block/non-block for operations.  <a href="#ad973d2f2256d6b01c82b83f235a9f76f">More...</a><br /></td></tr>
 <tr class="separator:ad973d2f2256d6b01c82b83f235a9f76f inherit pub_methods_classIFileDesc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae980c856689faa4b997ae12dc0f1cfce inherit pub_methods_classIFileDesc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae980c856689faa4b997ae12dc0f1cfce"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>close</b> ()</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIFileDesc.html#ae980c856689faa4b997ae12dc0f1cfce">close</a> ()</td></tr>
+<tr class="memdesc:ae980c856689faa4b997ae12dc0f1cfce inherit pub_methods_classIFileDesc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Close this fd. <br /></td></tr>
 <tr class="separator:ae980c856689faa4b997ae12dc0f1cfce inherit pub_methods_classIFileDesc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
@@ -237,36 +244,84 @@ static const int&#160;</td><td class="memItemRight" valign="bottom"><b>kInvalidF
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pub_static_methods_classIFileDesc"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_classIFileDesc')"><img src="closed.png" alt="-"/>&#160;Static Public Member Functions inherited from <a class="el" href="classIFileDesc.html">IFileDesc</a></td></tr>
-<tr class="memitem:a569dc2600ff319007c186c4698447241 inherit pub_static_methods_classIFileDesc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a569dc2600ff319007c186c4698447241"></a>
-static std::string&#160;</td><td class="memItemRight" valign="bottom"><b>ErrMsg</b> ()</td></tr>
+<tr class="memitem:a569dc2600ff319007c186c4698447241 inherit pub_static_methods_classIFileDesc"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIFileDesc.html#a569dc2600ff319007c186c4698447241">ErrMsg</a> ()</td></tr>
+<tr class="memdesc:a569dc2600ff319007c186c4698447241 inherit pub_static_methods_classIFileDesc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get latest <code>errno</code> and error message.  <a href="#a569dc2600ff319007c186c4698447241">More...</a><br /></td></tr>
 <tr class="separator:a569dc2600ff319007c186c4698447241 inherit pub_static_methods_classIFileDesc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pro_types_classCSocket"><td colspan="2" onclick="javascript:toggleInherit('pro_types_classCSocket')"><img src="closed.png" alt="-"/>&#160;Protected Types inherited from <a class="el" href="classCSocket.html">CSocket</a></td></tr>
-<tr class="memitem:afea7f7119c7f08447f1ad60c8dd0188b inherit pro_types_classCSocket"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afea7f7119c7f08447f1ad60c8dd0188b"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>EType</b> { <b>kTcp</b>, 
-<b>kUdp</b>
- }</td></tr>
-<tr class="separator:afea7f7119c7f08447f1ad60c8dd0188b inherit pro_types_classCSocket"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pro_methods_classCSocket"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classCSocket')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classCSocket.html">CSocket</a></td></tr>
-<tr class="memitem:ab30faac91231da891eebfebe90df0096 inherit pro_methods_classCSocket"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab30faac91231da891eebfebe90df0096"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>CSocket</b> (int family, EType type)</td></tr>
-<tr class="separator:ab30faac91231da891eebfebe90df0096 inherit pro_methods_classCSocket"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a84c28d936f1350ba20bd91d06a56dad1 inherit pro_methods_classCSocket"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a84c28d936f1350ba20bd91d06a56dad1"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>getSock</b> (int family, EType type)</td></tr>
-<tr class="separator:a84c28d936f1350ba20bd91d06a56dad1 inherit pro_methods_classCSocket"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac5d13a851235400666981f3a850b671f inherit pro_methods_classCSocket"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac5d13a851235400666981f3a850b671f"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>bindTo</b> (const <a class="el" href="classCSockAddr.html">CSockAddr</a> &amp;addr)</td></tr>
-<tr class="separator:ac5d13a851235400666981f3a850b671f inherit pro_methods_classCSocket"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4acc798daa8c6958a796a41ee99c675b inherit pro_methods_classCSocket"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4acc798daa8c6958a796a41ee99c675b"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>connectTo</b> (const <a class="el" href="classCSockAddr.html">CSockAddr</a> &amp;addr)</td></tr>
-<tr class="separator:a4acc798daa8c6958a796a41ee99c675b inherit pro_methods_classCSocket"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pro_attribs_classCSocket"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classCSocket')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classCSocket.html">CSocket</a></td></tr>
-<tr class="memitem:a7618c43a6cf5d5af61cc2b2b4dc455af inherit pro_attribs_classCSocket"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7618c43a6cf5d5af61cc2b2b4dc455af"></a>
-<a class="el" href="classCSockAddr.html">CSockAddr</a>&#160;</td><td class="memItemRight" valign="bottom"><b>peer_</b></td></tr>
-<tr class="separator:a7618c43a6cf5d5af61cc2b2b4dc455af inherit pro_attribs_classCSocket"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pro_attribs_classIFileDesc"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classIFileDesc')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classIFileDesc.html">IFileDesc</a></td></tr>
-<tr class="memitem:a4bcb0103e9d85065e432e6f88cf307b4 inherit pro_attribs_classIFileDesc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4bcb0103e9d85065e432e6f88cf307b4"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>fd_</b></td></tr>
-<tr class="separator:a4bcb0103e9d85065e432e6f88cf307b4 inherit pro_attribs_classIFileDesc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="ad7877363f92fa328ca3ce3997d0258b0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int CUdpSocket::fdType </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get type id of this object. </p>
+<p>Any concrete class derived from <a class="el" href="classIFileDesc.html" title="Abstract interface of fd (file descriptor). ">IFileDesc</a> must define a distinct type id named <code>kFdType</code>, so it's possible to check this id and determine what the object really is. <br />
+ Currently following <code>kFdType</code>s are defined: </p><table class="doxtable">
+<tr>
+<th align="right">Type Id </th><th>Value  </th></tr>
+<tr>
+<td align="right"><code><a class="el" href="classCFile.html#aa1292aacbcdcf5db7c7284ed78ad6063" title="type id ">CFile::kFdType</a></code> </td><td>1 </td></tr>
+<tr>
+<td align="right">CTcpConnSocket::kFdType </td><td>2 </td></tr>
+<tr>
+<td align="right">CListenSocket::kFdType </td><td>3 </td></tr>
+<tr>
+<td align="right">CUdpSocket::kFdType </td><td>4 </td></tr>
+<tr>
+<td align="right">CPosixShmFile::kFdType </td><td>5 </td></tr>
+<tr>
+<td align="right">CEpoll::kFdType </td><td>6 </td></tr>
+</table>
+<dl class="section return"><dt>Returns</dt><dd>Type id of this object </dd></dl>
+
+<p>Implements <a class="el" href="classIFileDesc.html#ae672489c32d8842275ed14f48f4113be">IFileDesc</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a3bfba6e541a64e3a83c28061c45cb98e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* CUdpSocket::fdTypeName </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get type name of this object. </p>
+<p>Any concrete class derived from <a class="el" href="classIFileDesc.html" title="Abstract interface of fd (file descriptor). ">IFileDesc</a> must give a readable name to identify itself. </p><dl class="section return"><dt>Returns</dt><dd>Readable type name </dd></dl>
+
+<p>Implements <a class="el" href="classIFileDesc.html#a5057e91a67a7798254e6aa2274d179b5">IFileDesc</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li><a class="el" href="sockets_8hh_source.html">sockets.hh</a></li>
 </ul>
