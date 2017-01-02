@@ -40,9 +40,9 @@ CXXFLAGS += -MD
 
 all: debug
 
-debug: proto $(TARGET)
+debug: $(TARGET)
 
-release: proto $(TARGET)
+release: $(TARGET)
 #	@strip $(TARGET)
 
 proto: $(PB_CC_SRC)
