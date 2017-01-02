@@ -139,7 +139,7 @@ bool CSockSession::acceptClient(CSockSession ** client)
         return false;
     }
     if(!listen->acceptSocket(*clientSock)){
-        ERROR("listen sock="<<tools::ToStringPtr(listen)<<" accept client error"<<CSocket::ErrMsg());
+        ERROR("listen sock="<<tools::ToStringPtr(listen)<<" accept client error"<<ISocket::ErrMsg());
         return false;
     }
     if(!clientSock->valid()){     //no more
@@ -191,7 +191,7 @@ bool CSockSession::recvTcp()
         if(n < 0){
             if(EAGAIN == errno || EWOULDBLOCK == errno)    //no more
                 break;
-            ERROR("recv failed for sock="<<tools::ToStringPtr(sock)<<CSocket::ErrMsg());
+            ERROR("recv failed for sock="<<tools::ToStringPtr(sock)<<ISocket::ErrMsg());
             return false;
         }else if(0 == n){
             DEBUG("peer closed for sock="<<tools::ToStringPtr(sock));
@@ -229,7 +229,7 @@ bool CSockSession::recvUdp()
         if(n < 0){
             if(EAGAIN == errno || EWOULDBLOCK == errno)    //no more
                 break;
-            ERROR("recv failed for sock="<<tools::ToStringPtr(sock)<<CSocket::ErrMsg());
+            ERROR("recv failed for sock="<<tools::ToStringPtr(sock)<<ISocket::ErrMsg());
             return false;
         }
         ATTR_ADD(ATTR_UDP_RECV, 1);
@@ -324,7 +324,7 @@ bool CSockSession::sendTcp()
                 addEvents(kEventTcpSend);
                 break;
             }
-            ERROR("send failed for buf="<<tools::Dump(buf)<<" for sock="<<toString()<<CSocket::ErrMsg());
+            ERROR("send failed for buf="<<tools::Dump(buf)<<" for sock="<<toString()<<ISocket::ErrMsg());
             return false;
         }
         ATTR_ADD(ATTR_TCP_SEND, 1);
@@ -368,7 +368,7 @@ bool CSockSession::sendUdp()
                 addEvents(kEventUdpSend);
                 break;
             }
-            ERROR("send failed for addr="<<addr.toString()<<", buf="<<tools::Dump(buf)<<" for sock="<<toString()<<CSocket::ErrMsg());
+            ERROR("send failed for addr="<<addr.toString()<<", buf="<<tools::Dump(buf)<<" for sock="<<toString()<<ISocket::ErrMsg());
             return false;
         }
         ATTR_ADD(ATTR_UDP_SEND, 1);

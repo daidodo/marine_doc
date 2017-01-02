@@ -250,7 +250,7 @@ bool CHshaEngineImpl::addNameListen(__NamePtr & n)
     }
     //socket
     if(!sock->getSock(name.hostAddr().family())){
-        ERROR("cannot getSock for name="<<name.toString()<<CSocket::ErrMsg());
+        ERROR("cannot getSock for name="<<name.toString()<<ISocket::ErrMsg());
         return false;
     }
     if(name.callback() && !name.callback()->onSocket(*sock)){
@@ -259,7 +259,7 @@ bool CHshaEngineImpl::addNameListen(__NamePtr & n)
     }
     //bind
     if(!sock->bindAddr(name.hostAddr())){
-        ERROR("cannot bindAddr for name="<<name.toString()<<CSocket::ErrMsg());
+        ERROR("cannot bindAddr for name="<<name.toString()<<ISocket::ErrMsg());
         return false;
     }
     __SendList sendList;
@@ -272,7 +272,7 @@ bool CHshaEngineImpl::addNameListen(__NamePtr & n)
     }
     //listen
     if(!sock->listenAddr(name.hostAddr(), 0, false)){
-        ERROR("cannot listenAddr for name="<<name.toString()<<CSocket::ErrMsg());
+        ERROR("cannot listenAddr for name="<<name.toString()<<ISocket::ErrMsg());
         return false;
     }
     if(name.callback() && !name.callback()->onListen(*sock)){
@@ -310,7 +310,7 @@ bool CHshaEngineImpl::addNameClient(__NamePtr & n)
     }
     //socket
     if(!sock->getSock(name.peerAddr().family())){
-        ERROR("cannot getSock for name="<<name.toString()<<CSocket::ErrMsg());
+        ERROR("cannot getSock for name="<<name.toString()<<ISocket::ErrMsg());
         return false;
     }
     if(name.callback() && !name.callback()->onSocket(*sock)){
@@ -321,7 +321,7 @@ bool CHshaEngineImpl::addNameClient(__NamePtr & n)
     __SendList sendList;
     if(name.hostAddr().valid()){
         if(!sock->bindAddr(name.hostAddr())){
-            ERROR("cannot bindAddr for name="<<name.toString()<<CSocket::ErrMsg());
+            ERROR("cannot bindAddr for name="<<name.toString()<<ISocket::ErrMsg());
             return false;
         }
         if(name.callback() && !name.callback()->onBind(*sock, sendList)){
@@ -331,7 +331,7 @@ bool CHshaEngineImpl::addNameClient(__NamePtr & n)
     }
     //connect
     if(!sock->connectAddr(name.peerAddr())){
-        ERROR("cannot connectAddr for name="<<name.toString()<<CSocket::ErrMsg());
+        ERROR("cannot connectAddr for name="<<name.toString()<<ISocket::ErrMsg());
         return false;
     }
     if(name.callback() && !name.callback()->onConnect(*sock, sendList)){
@@ -340,7 +340,7 @@ bool CHshaEngineImpl::addNameClient(__NamePtr & n)
     }
     //non-block
     if(!sock->block(false)){
-        ERROR("cannot set non-block for name="<<name.toString()<<CSocket::ErrMsg());
+        ERROR("cannot set non-block for name="<<name.toString()<<ISocket::ErrMsg());
         return false;
     }
     //new sock session
@@ -376,7 +376,7 @@ bool CHshaEngineImpl::addNameUdp(__NamePtr & n)
     }
     //socket
     if(!sock->getSock(AF_INET)){
-        ERROR("cannot getSock for name="<<name.toString()<<CSocket::ErrMsg());
+        ERROR("cannot getSock for name="<<name.toString()<<ISocket::ErrMsg());
         return false;
     }
     if(name.callback() && !name.callback()->onSocket(*sock)){
@@ -387,7 +387,7 @@ bool CHshaEngineImpl::addNameUdp(__NamePtr & n)
     __SendList sendList;
     if(name.hostAddr().valid()){
         if(!sock->bindAddr(name.hostAddr())){
-            ERROR("cannot bindAddr for name="<<name.toString()<<CSocket::ErrMsg());
+            ERROR("cannot bindAddr for name="<<name.toString()<<ISocket::ErrMsg());
             return false;
         }
         if(name.callback() && !name.callback()->onBind(*sock, sendList)){
@@ -398,7 +398,7 @@ bool CHshaEngineImpl::addNameUdp(__NamePtr & n)
     //connect
     if(name.peerAddr().valid()){
         if(!sock->connectAddr(name.peerAddr())){
-            ERROR("cannot connectAddr for name="<<name.toString()<<CSocket::ErrMsg());
+            ERROR("cannot connectAddr for name="<<name.toString()<<ISocket::ErrMsg());
             return false;
         }
         if(name.callback() && !name.callback()->onConnect(*sock, sendList)){
@@ -408,7 +408,7 @@ bool CHshaEngineImpl::addNameUdp(__NamePtr & n)
     }
     //non-block
     if(!sock->block(false)){
-        ERROR("cannot set non-block for name="<<name.toString()<<CSocket::ErrMsg());
+        ERROR("cannot set non-block for name="<<name.toString()<<ISocket::ErrMsg());
         return false;
     }
     //new sock session

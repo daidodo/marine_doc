@@ -13,7 +13,7 @@ class CServerCallback
 public:
     //typedefs
     typedef marine::CSockAddr                   __SockAddr;
-    typedef marine::CSocket                     __Socket;
+    typedef marine::ISocket                     __Socket;
     typedef marine::CListenSocket               __Listen;
     typedef marine::CTcpConnSocket              __TcpConn;
     typedef std::pair<std::string, __SockAddr>  __SendElem;

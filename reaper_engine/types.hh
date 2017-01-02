@@ -7,7 +7,7 @@
 NS_HSHA_BEGIN
 
 typedef marine::CSockAddr       __SockAddr;
-typedef marine::CSocket         __Socket;
+typedef marine::ISocket         __Socket;
 typedef marine::CListenSocket   __ListenSocket;
 typedef marine::CTcpConnSocket  __TcpConnSocket;
 typedef marine::CUdpSocket      __UdpSocket;
