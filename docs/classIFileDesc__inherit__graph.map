@@ -1,6 +1,6 @@
 <map id="IFileDesc" name="IFileDesc">
 <area shape="rect" id="node2" href="$classCEpoll.html" title="Representation of epoll(7). " alt="" coords="46,80,107,107"/>
-<area shape="rect" id="node3" href="$classCFile.html" title="CFile" alt="" coords="131,80,185,107"/>
+<area shape="rect" id="node3" href="$classCFile.html" title="Regular file operations. " alt="" coords="131,80,185,107"/>
 <area shape="rect" id="node5" href="$classISocket.html" title="ISocket" alt="" coords="234,80,301,107"/>
 <area shape="rect" id="node4" href="$classCPosixShmFile.html" title="CPosixShmFile" alt="" coords="5,155,119,181"/>
 <area shape="rect" id="node6" href="$classCListenSocket.html" title="CListenSocket" alt="" coords="143,155,251,181"/>

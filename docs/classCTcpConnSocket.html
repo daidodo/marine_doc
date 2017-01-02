@@ -267,24 +267,25 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Get type id of this object. </p>
-<p>Any concrete class derived from <a class="el" href="classIFileDesc.html" title="Abstract interface of fd (file descriptor). ">IFileDesc</a> must define a distinct type id named <code>kFdType</code>, so it's possible to check this id and determine what the object really is. <br />
+<p>Any concrete class derived from <a class="el" href="classIFileDesc.html" title="Abstract interface of fd (file descriptor). ">IFileDesc</a> shall define a distinct type id named <code>kFdType</code>, so it's possible to check this id and determine what the object really is. <br />
  Currently following <code>kFdType</code>s are defined: </p><table class="doxtable">
 <tr>
 <th align="right">Type Id </th><th>Value  </th></tr>
 <tr>
-<td align="right"><code><a class="el" href="classCFile.html#aa1292aacbcdcf5db7c7284ed78ad6063" title="type id ">CFile::kFdType</a></code> </td><td>1 </td></tr>
+<td align="right"><code><a class="el" href="classCFile.html#aa1292aacbcdcf5db7c7284ed78ad6063" title="Type id. ">CFile::kFdType</a></code> </td><td>1 </td></tr>
 <tr>
-<td align="right">CTcpConnSocket::kFdType </td><td>2 </td></tr>
+<td align="right"><code>CTcpConnSocket::kFdType</code> </td><td>2 </td></tr>
 <tr>
-<td align="right">CListenSocket::kFdType </td><td>3 </td></tr>
+<td align="right"><code>CListenSocket::kFdType</code> </td><td>3 </td></tr>
 <tr>
-<td align="right">CUdpSocket::kFdType </td><td>4 </td></tr>
+<td align="right"><code>CUdpSocket::kFdType</code> </td><td>4 </td></tr>
 <tr>
-<td align="right">CPosixShmFile::kFdType </td><td>5 </td></tr>
+<td align="right"><code>CPosixShmFile::kFdType</code> </td><td>5 </td></tr>
 <tr>
-<td align="right">CEpoll::kFdType </td><td>6 </td></tr>
+<td align="right"><code>CEpoll::kFdType</code> </td><td>6 </td></tr>
 </table>
 <dl class="section return"><dt>Returns</dt><dd>Type id of this object </dd></dl>
+<dl class="section see"><dt>See also</dt><dd>kFdType </dd></dl>
 
 <p>Implements <a class="el" href="classIFileDesc.html#ae672489c32d8842275ed14f48f4113be">IFileDesc</a>.</p>
 

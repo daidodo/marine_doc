@@ -36,7 +36,7 @@ var searchData=
   ['cfddatamap',['CFdDataMap',['../classCFdDataMap.html',1,'CFdDataMap&lt; T, LockT &gt;'],['../classCFdDataMap.html#a0ca5b29256ab40aa0dbf584568f772d6',1,'CFdDataMap::CFdDataMap()']]],
   ['cfdmap',['CFdMap',['../structCFdMap.html',1,'CFdMap&lt; T, Container &gt;'],['../structCFdMap.html#afd8dc479696ad008b2ea5dd2622fc5e7',1,'CFdMap::CFdMap()']]],
   ['cfdmap_3c_20pointer_20_3e',['CFdMap&lt; pointer &gt;',['../structCFdMap.html',1,'']]],
-  ['cfile',['CFile',['../classCFile.html',1,'']]],
+  ['cfile',['CFile',['../classCFile.html',1,'CFile'],['../classCFile.html#a82635098055a4778bdc7ec056066c19f',1,'CFile::CFile()']]],
   ['cfilelock',['CFileLock',['../classCFileLock.html',1,'']]],
   ['cfixedheap',['CFixedHeap',['../classCFixedHeap.html',1,'']]],
   ['cfreqcontrol',['CFreqControl',['../structCFreqControl.html',1,'']]],

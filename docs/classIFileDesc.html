@@ -105,7 +105,7 @@ Inheritance diagram for IFileDesc:</div>
 <div class="center"><img src="classIFileDesc__inherit__graph.png" border="0" usemap="#IFileDesc_inherit__map" alt="Inheritance graph"/></div>
 <map name="IFileDesc_inherit__map" id="IFileDesc_inherit__map">
 <area shape="rect" id="node2" href="classCEpoll.html" title="Representation of epoll(7). " alt="" coords="46,80,107,107"/>
-<area shape="rect" id="node3" href="classCFile.html" title="CFile" alt="" coords="131,80,185,107"/>
+<area shape="rect" id="node3" href="classCFile.html" title="Regular file operations. " alt="" coords="131,80,185,107"/>
 <area shape="rect" id="node5" href="classISocket.html" title="ISocket" alt="" coords="234,80,301,107"/>
 <area shape="rect" id="node4" href="classCPosixShmFile.html" title="CPosixShmFile" alt="" coords="5,155,119,181"/>
 <area shape="rect" id="node6" href="classCListenSocket.html" title="CListenSocket" alt="" coords="143,155,251,181"/>
@@ -231,6 +231,7 @@ static const int&#160;</td><td class="memItemRight" valign="bottom"><b>kInvalidF
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><code>true</code> if succeeded; <code>false</code> otherwise </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classIFileDesc.html#a569dc2600ff319007c186c4698447241" title="Get latest errno and error message. ">ErrMsg</a> </dd></dl>
 
 </div>
 </div>
@@ -334,24 +335,25 @@ static const int&#160;</td><td class="memItemRight" valign="bottom"><b>kInvalidF
 </div><div class="memdoc">
 
 <p>Get type id of this object. </p>
-<p>Any concrete class derived from <a class="el" href="classIFileDesc.html" title="Abstract interface of fd (file descriptor). ">IFileDesc</a> must define a distinct type id named <code>kFdType</code>, so it's possible to check this id and determine what the object really is. <br />
+<p>Any concrete class derived from <a class="el" href="classIFileDesc.html" title="Abstract interface of fd (file descriptor). ">IFileDesc</a> shall define a distinct type id named <code>kFdType</code>, so it's possible to check this id and determine what the object really is. <br />
  Currently following <code>kFdType</code>s are defined: </p><table class="doxtable">
 <tr>
 <th align="right">Type Id </th><th>Value  </th></tr>
 <tr>
-<td align="right"><code><a class="el" href="classCFile.html#aa1292aacbcdcf5db7c7284ed78ad6063" title="type id ">CFile::kFdType</a></code> </td><td>1 </td></tr>
+<td align="right"><code><a class="el" href="classCFile.html#aa1292aacbcdcf5db7c7284ed78ad6063" title="Type id. ">CFile::kFdType</a></code> </td><td>1 </td></tr>
 <tr>
-<td align="right">CTcpConnSocket::kFdType </td><td>2 </td></tr>
+<td align="right"><code>CTcpConnSocket::kFdType</code> </td><td>2 </td></tr>
 <tr>
-<td align="right">CListenSocket::kFdType </td><td>3 </td></tr>
+<td align="right"><code>CListenSocket::kFdType</code> </td><td>3 </td></tr>
 <tr>
-<td align="right">CUdpSocket::kFdType </td><td>4 </td></tr>
+<td align="right"><code>CUdpSocket::kFdType</code> </td><td>4 </td></tr>
 <tr>
-<td align="right">CPosixShmFile::kFdType </td><td>5 </td></tr>
+<td align="right"><code>CPosixShmFile::kFdType</code> </td><td>5 </td></tr>
 <tr>
-<td align="right">CEpoll::kFdType </td><td>6 </td></tr>
+<td align="right"><code>CEpoll::kFdType</code> </td><td>6 </td></tr>
 </table>
 <dl class="section return"><dt>Returns</dt><dd>Type id of this object </dd></dl>
+<dl class="section see"><dt>See also</dt><dd>kFdType </dd></dl>
 
 <p>Implemented in <a class="el" href="classCListenSocket.html#ab6fc22ae113b137e4c0cf4a79e3a48e7">CListenSocket</a>, <a class="el" href="classCTcpConnSocket.html#a7ed65a54a8225af2043b687a3c4c1d3e">CTcpConnSocket</a>, <a class="el" href="classCUdpSocket.html#ad7877363f92fa328ca3ce3997d0258b0">CUdpSocket</a>, <a class="el" href="classCFile.html#ac676348b83d3e529113e76dff43be4a8">CFile</a>, <a class="el" href="classCEpoll.html#a20b4f2125d2c65af2071c67433b91dc5">CEpoll</a>, and <a class="el" href="classCPosixShmFile.html#a15f1f6972b2ba340c5021c001d41c7a4">CPosixShmFile</a>.</p>
 
@@ -407,7 +409,8 @@ static const int&#160;</td><td class="memItemRight" valign="bottom"><b>kInvalidF
 </div><div class="memdoc">
 
 <p>Get file name opened by this object. </p>
-<dl class="section return"><dt>Returns</dt><dd>A file name </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A file name, or an empty string if any error occurs </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classIFileDesc.html#a569dc2600ff319007c186c4698447241" title="Get latest errno and error message. ">ErrMsg</a> </dd></dl>
 
 </div>
 </div>
@@ -438,6 +441,7 @@ static const int&#160;</td><td class="memItemRight" valign="bottom"><b>kInvalidF
 <li>others: Byte size of file </li>
 </ul>
 </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classIFileDesc.html#a569dc2600ff319007c186c4698447241" title="Get latest errno and error message. ">ErrMsg</a> </dd></dl>
 
 </div>
 </div>
