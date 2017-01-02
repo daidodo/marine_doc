@@ -1,9 +1,11 @@
 tags
 *.[aod]
 *.tgz
+*.log
 *.so
 *.pb.cc
 *.pb.h
 *.gperf
+*.gprof
 *.perf
 *.time
