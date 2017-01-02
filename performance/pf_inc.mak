@@ -38,7 +38,7 @@ TARGET_GPERF_OBJ := $(TARGET_SRC:.cc=.gperf.o)
 TARGET_PERF_OBJ := $(TARGET_SRC:.cc=.perf.o)
 ALL_OBJ := $(TIME_OBJ) $(GPROF_OBJ) $(GPERF_OBJ) $(PERF_OBJ) $(TARGET_TIME_OBJ) $(TARGET_GPROF_OBJ) $(TARGET_GPERF_OBJ) $(TARGET_PERF_OBJ)
 
-DEP := $(ALL_OBJ:.o=.d)
+DEP := $(ALL_CC_SRC:.cc=.d) $(C_SRC:.c=.d)
 
 CXXFLAGS += -MD
 CFLAGS += -MD
@@ -57,6 +57,8 @@ gprof: $(TARGET_GPROF)
 gperf: $(TARGET_GPERF)
 
 perf: $(TARGET_PERF)
+
+proto: $(PB_CC_SRC)
 
 %.time: %.time.o $(TIME_OBJ)
 	$(CXX) $(TIME_FLAGS) $(CXXFLAGS) -D__TIME -o $@ $^ $(LIB)
@@ -95,9 +97,6 @@ perf: $(TARGET_PERF)
 %.perf.o: %.c
 	$(CC) $(PERF_FLAGS) $(CFLAGS) -D__PERF -c -o $@ $<
 
-%.pb.h: %.proto
-	$(PROTOC) $(PROTOCFLAGS) $<
-
 %.pb.cc: %.proto
 	$(PROTOC) $(PROTOCFLAGS) $<
 
@@ -113,4 +112,10 @@ cleanall: clean
 
 .PHONY: all time gprof gperf perf clean cleanall
 
+.SECONDARY: $(ALL_OBJ)
+
+ifneq ($(MAKECMDGOALS),clean)      
+ifneq ($(MAKECMDGOALS),cleanall)   
 sinclude $(DEP)
+endif
+endif
