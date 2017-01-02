@@ -34,8 +34,9 @@ PROTOCFLAGS := --cpp_out=.
 
 TARGET_SRC := $(wildcard *_main.cc)
 PB_SRC := $(wildcard *.proto)
+PB_CC_SRC := $(PB_SRC:.proto=.pb.cc)
 C_SRC := $(wildcard *.c)
-CC_SRC := $(wildcard *.cc) $(PB_SRC:.proto=.pb.cc)
+CC_SRC := $(wildcard *.cc) $(PB_CC_SRC)
 
 TARGET_OBJ := $(TARGET_SRC:.cc=.o)
 C_OBJ := $(C_SRC:.c=.o)
@@ -53,6 +54,8 @@ all: debug
 debug: reaper_debug $(TARGET)
 
 release: reaper_release $(TARGET)
+
+proto: $(PB_CC_SRC)
 
 reaper_debug:
 	$(MAKE) -e -C $(ENGINE_DIR) debug
@@ -73,9 +76,6 @@ reaper_clean:
 	$(MAKE) -C $(ENGINE_DIR) cleanall
 
 %.pb.cc: %.proto
-	$(PROTOC) $(PROTOCFLAGS) $<
-
-%.pb.h: %.proto
 	$(PROTOC) $(PROTOCFLAGS) $<
 
 .PHONY: all debug release reaper_debug reaper_release clean cleanall reaper_clean
