@@ -92,19 +92,133 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">CWideFreqControl Struct Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Rate limiting for any frequency, including ones less than 1Hz.  
+ <a href="structCWideFreqControl.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="freq__control_8hh_source.html">freq_control.hh</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a14733e6b02519a5ca2f651ff5def4561"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a14733e6b02519a5ca2f651ff5def4561"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>CWideFreqControl</b> (double freq=0)</td></tr>
-<tr class="separator:a14733e6b02519a5ca2f651ff5def4561"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5db20a12ae830ace8c633c0d2951d78f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5db20a12ae830ace8c633c0d2951d78f"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>init</b> (double freq)</td></tr>
-<tr class="separator:a5db20a12ae830ace8c633c0d2951d78f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a18f41c37ed123e215099984b0c510e5b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a18f41c37ed123e215099984b0c510e5b"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>get</b> ()</td></tr>
+<tr class="memitem:a18f41c37ed123e215099984b0c510e5b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structCWideFreqControl.html#a18f41c37ed123e215099984b0c510e5b">get</a> ()</td></tr>
+<tr class="memdesc:a18f41c37ed123e215099984b0c510e5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get 1 token.  <a href="#a18f41c37ed123e215099984b0c510e5b">More...</a><br /></td></tr>
 <tr class="separator:a18f41c37ed123e215099984b0c510e5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
+<tr class="memitem:a14733e6b02519a5ca2f651ff5def4561"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structCWideFreqControl.html#a14733e6b02519a5ca2f651ff5def4561">CWideFreqControl</a> (double freq=0)</td></tr>
+<tr class="memdesc:a14733e6b02519a5ca2f651ff5def4561"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize this object.  <a href="#a14733e6b02519a5ca2f651ff5def4561">More...</a><br /></td></tr>
+<tr class="separator:a14733e6b02519a5ca2f651ff5def4561"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5db20a12ae830ace8c633c0d2951d78f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structCWideFreqControl.html#a5db20a12ae830ace8c633c0d2951d78f">init</a> (double freq)</td></tr>
+<tr class="memdesc:a5db20a12ae830ace8c633c0d2951d78f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize this object.  <a href="#a5db20a12ae830ace8c633c0d2951d78f">More...</a><br /></td></tr>
+<tr class="separator:a5db20a12ae830ace8c633c0d2951d78f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Rate limiting for any frequency, including ones less than 1Hz. </p>
+<p>For any given frequency <code>F:</code> </p><ul>
+<li>If <code>F &gt;= 1</code>, <a class="el" href="structCWideFreqControl.html" title="Rate limiting for any frequency, including ones less than 1Hz. ">CWideFreqControl</a> generates <code>F</code> tokens per second; </li>
+<li>If <code>0 &lt; F &lt; 1</code>, <a class="el" href="structCWideFreqControl.html" title="Rate limiting for any frequency, including ones less than 1Hz. ">CWideFreqControl</a> generate 1 token in every <code>1/F</code> seconds; </li>
+<li>Otherwise, <a class="el" href="structCWideFreqControl.html" title="Rate limiting for any frequency, including ones less than 1Hz. ">CWideFreqControl</a> doesn't generate any token.</li>
+</ul>
+<p>Although <a class="el" href="structCWideFreqControl.html" title="Rate limiting for any frequency, including ones less than 1Hz. ">CWideFreqControl</a> is more powerful than <a class="el" href="structCFreqControl.html" title="Rate limiting for high frequency (&gt;1Hz) jobs. ">CFreqControl</a>, it has a simpler interface. After initialization, you can only <a class="el" href="structCWideFreqControl.html#a18f41c37ed123e215099984b0c510e5b">get</a> 1 token a time, and don't need to <em>generate</em> any more, because it has been done in <a class="el" href="structCWideFreqControl.html#a18f41c37ed123e215099984b0c510e5b">get</a>. And there is no way to <em>check</em> or <em>overdraw</em> tokens, because that might indicate a bad design of logic oftentimes. <br />
+ <a class="el" href="structCWideFreqControl.html" title="Rate limiting for any frequency, including ones less than 1Hz. ">CWideFreqControl</a> has a fixed bucket size of <code>(F + 1)</code>. <br />
+ All these considerations make <a class="el" href="structCWideFreqControl.html" title="Rate limiting for any frequency, including ones less than 1Hz. ">CWideFreqControl</a> simple and efficient enough for real world projects even with float-point operations. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a14733e6b02519a5ca2f651ff5def4561"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">CWideFreqControl::CWideFreqControl </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>freq</em> = <code>0</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Initialize this object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">freq</td><td>A non-negative real number denoting frequency </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>You can <a class="el" href="structCWideFreqControl.html#a5db20a12ae830ace8c633c0d2951d78f">init</a> this object again to change frequency. </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a18f41c37ed123e215099984b0c510e5b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CWideFreqControl::get </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get 1 token. </p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li><code>true:</code> Succeeded. One token is removed from bucket; </li>
+<li><code>false:</code> Failed. No token is removed. </li>
+</ul>
+</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a5db20a12ae830ace8c633c0d2951d78f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CWideFreqControl::init </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>freq</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Initialize this object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">freq</td><td>A non-negative real number denoting frequency </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>You can <a class="el" href="structCWideFreqControl.html#a5db20a12ae830ace8c633c0d2951d78f">init</a> this object again to change frequency. </dd></dl>
+
+</div>
+</div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
 <li><a class="el" href="freq__control_8hh_source.html">freq_control.hh</a></li>
 </ul>

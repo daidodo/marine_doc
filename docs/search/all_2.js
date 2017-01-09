@@ -39,13 +39,14 @@ var searchData=
   ['cfile',['CFile',['../classCFile.html',1,'CFile'],['../classCFile.html#a82635098055a4778bdc7ec056066c19f',1,'CFile::CFile()']]],
   ['cfilelock',['CFileLock',['../classCFileLock.html',1,'']]],
   ['cfixedheap',['CFixedHeap',['../classCFixedHeap.html',1,'']]],
-  ['cfreqcontrol',['CFreqControl',['../structCFreqControl.html',1,'']]],
+  ['cfreqcontrol',['CFreqControl',['../structCFreqControl.html',1,'CFreqControl'],['../structCFreqControl.html#a38e7cb945cba5e5bc69ee4287357d0f5',1,'CFreqControl::CFreqControl()'],['../structCFreqControl.html#afb763c9b18aa0450397de097db4c697b',1,'CFreqControl::CFreqControl(size_t freq, size_t bucketSz)']]],
   ['cfreqcounter',['CFreqCounter',['../classCFreqCounter.html',1,'']]],
   ['cguard',['CGuard',['../classCGuard.html',1,'']]],
   ['char_5fbuffer_2ehh',['char_buffer.hh',['../char__buffer_8hh.html',1,'']]],
   ['charset_5fconvert_2ehh',['charset_convert.hh',['../charset__convert_8hh.html',1,'']]],
   ['chashfn',['CHashFn',['../structCHashFn.html',1,'']]],
   ['cheap',['CHeap',['../classCHeap.html',1,'']]],
+  ['check',['check',['../structCFreqControl.html#af4f9a79efa78c60a386f663d5bf9ee0e',1,'CFreqControl']]],
   ['cidentity',['CIdentity',['../structCIdentity.html',1,'']]],
   ['cinbytestream',['CInByteStream',['../classCInByteStream.html',1,'CInByteStream'],['../classCInByteStream.html#aad00b8a271fe087e3617572c09683dd2',1,'CInByteStream::CInByteStream()'],['../classCInByteStream.html#af1cc4c17b6cc68ac1fd8982ed2fda472',1,'CInByteStream::CInByteStream(const char *buf, size_t sz, bool net=kByteOrderDefault)'],['../classCInByteStream.html#ad4d7f3bd9a1caed7763a316e54b4f1ae',1,'CInByteStream::CInByteStream(const unsigned char *buf, size_t sz, bool net=kByteOrderDefault)'],['../classCInByteStream.html#a71c64b918052c19b441cf7fbe3503fea',1,'CInByteStream::CInByteStream(const signed char *buf, size_t sz, bool net=kByteOrderDefault)'],['../classCInByteStream.html#a72642e8322a943da6f4aca17dae8b2bb',1,'CInByteStream::CInByteStream(const std::string &amp;buf, bool net=kByteOrderDefault)']]],
   ['clear',['clear',['../classCAtomicHashTable.html#a3c08beefde17362a0333544f3619ac52',1,'CAtomicHashTable::clear()'],['../classCCharBuffer.html#a196c7982d8f0b27435856444d13ad96f',1,'CCharBuffer::clear()'],['../classCConfiguration.html#a6d4d88c0c598a9ab97f1ef9f208c9960',1,'CConfiguration::clear()'],['../structCFdMap.html#abe7ed32776dc50e6487301f9aaee40da',1,'CFdMap::clear()'],['../classCFdDataMap.html#a8f03b5be87002c75d42ecf1a39444807',1,'CFdDataMap::clear()']]],
@@ -126,6 +127,6 @@ var searchData=
   ['cudpsocket',['CUdpSocket',['../classCUdpSocket.html',1,'']]],
   ['cunnamedsemaphore',['CUnnamedSemaphore',['../classCUnnamedSemaphore.html',1,'']]],
   ['cur',['cur',['../classCInByteStream.html#ae19e54f17ae3b9d34892fef290af5bab',1,'CInByteStream::cur()'],['../classCOutByteStreamBasic.html#ab42c4e25c46d61f7eef4f14aff0db45d',1,'COutByteStreamBasic::cur()']]],
-  ['cwidefreqcontrol',['CWideFreqControl',['../structCWideFreqControl.html',1,'']]],
+  ['cwidefreqcontrol',['CWideFreqControl',['../structCWideFreqControl.html',1,'CWideFreqControl'],['../structCWideFreqControl.html#a14733e6b02519a5ca2f651ff5def4561',1,'CWideFreqControl::CWideFreqControl()']]],
   ['cxsisemaphoreset',['CXsiSemaphoreSet',['../classCXsiSemaphoreSet.html',1,'']]]
 ];

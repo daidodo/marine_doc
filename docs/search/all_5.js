@@ -12,6 +12,7 @@ var searchData=
   ['file_2ehh',['file.hh',['../file_8hh.html',1,'']]],
   ['filename',['filename',['../classIFileDesc.html#ad7ecc1c5390e80fccaacd41e60b0b18d',1,'IFileDesc']]],
   ['finish',['finish',['../classCOutByteStreamBasic.html#a944b54097f754a3dd27d97e2bc0c52e2',1,'COutByteStreamBasic::finish()'],['../classCOutByteStreamBasic.html#a919cc32ad042279151311aa1bc2631ae',1,'COutByteStreamBasic::finish(SizeT *sz)'],['../classCOutByteStreamBasic.html#a1910025b866aec138912834bef582a82',1,'COutByteStreamBasic::finish(buffer_type &amp;dst)'],['../classCOutByteStreamBasic.html#a03a964d5a507f05fe6275e0d392b6d38',1,'COutByteStreamBasic::finish(CharT *dst, size_t *sz)']]],
+  ['freq_5fcontrol_2ehh',['freq_control.hh',['../freq__control_8hh.html',1,'']]],
   ['fromcode',['fromCode',['../classCCharsetConvert.html#a6828b211cff5a8319c215f11f167a192',1,'CCharsetConvert']]],
   ['front',['front',['../classCCharBuffer.html#aa99c62f4e79202006cd3d10553707d31',1,'CCharBuffer::front()'],['../classCCharBuffer.html#a2317d30430067662ba201dcfc1950cb3',1,'CCharBuffer::front() const ']]]
 ];

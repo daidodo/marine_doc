@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.11"/>
-<title>Marine Library: Member List</title>
+<title>Marine Library: freq_control.hh File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -41,8 +41,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
-      <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
-      <li><a href="files.html"><span>Files</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -63,10 +63,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   </div>
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
-      <li><a href="annotated.html"><span>Class&#160;List</span></a></li>
-      <li><a href="classes.html"><span>Class&#160;Index</span></a></li>
-      <li><a href="inherits.html"><span>Class&#160;Hierarchy</span></a></li>
-      <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
+      <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
 <!-- window showing the filter options -->
@@ -83,24 +81,38 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_8f88634022b2fc9e8bb020a4d4f478ba.html">marine</a></li>  </ul>
+</div>
 </div><!-- top -->
 <div class="header">
+  <div class="summary">
+<a href="#nested-classes">Classes</a>  </div>
   <div class="headertitle">
-<div class="title">CFreqControl Member List</div>  </div>
+<div class="title">freq_control.hh File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>This is the complete list of members for <a class="el" href="structCFreqControl.html">CFreqControl</a>, including all inherited members.</p>
-<table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="structCFreqControl.html#a38e7cb945cba5e5bc69ee4287357d0f5">CFreqControl</a>()</td><td class="entry"><a class="el" href="structCFreqControl.html">CFreqControl</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="structCFreqControl.html#afb763c9b18aa0450397de097db4c697b">CFreqControl</a>(size_t freq, size_t bucketSz)</td><td class="entry"><a class="el" href="structCFreqControl.html">CFreqControl</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="structCFreqControl.html#af4f9a79efa78c60a386f663d5bf9ee0e">check</a>(size_t need) const </td><td class="entry"><a class="el" href="structCFreqControl.html">CFreqControl</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="structCFreqControl.html#ab9703740913d912e713bc8fbe2cdef19">generate</a>(uint64_t nowUs=0)</td><td class="entry"><a class="el" href="structCFreqControl.html">CFreqControl</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="structCFreqControl.html#a20fa0353a2f4d7a44e89157f71bf2b07">get</a>(size_t need=1)</td><td class="entry"><a class="el" href="structCFreqControl.html">CFreqControl</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="structCFreqControl.html#a819d58f5ce65ed8813ba7714584aec10">init</a>(size_t freq, size_t bucketSz)</td><td class="entry"><a class="el" href="structCFreqControl.html">CFreqControl</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="structCFreqControl.html#abc2aa31e57cdd3a015ffad7106b20783">overdraw</a>(size_t need)</td><td class="entry"><a class="el" href="structCFreqControl.html">CFreqControl</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="structCFreqControl.html#a8165b3277bdcd78ccf431065a6837039">token</a>() const </td><td class="entry"><a class="el" href="structCFreqControl.html">CFreqControl</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-</table></div><!-- contents -->
+<p>Tools for rate limiting, bandwidth control and burstiness suppression.  
+<a href="#details">More...</a></p>
+<div class="textblock"><code>#include &quot;tools/time.hh&quot;</code><br />
+</div>
+<p><a href="freq__control_8hh_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structCFreqControl.html">CFreqControl</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rate limiting for high frequency (&gt;1Hz) jobs.  <a href="structCFreqControl.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structCWideFreqControl.html">CWideFreqControl</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rate limiting for any frequency, including ones less than 1Hz.  <a href="structCWideFreqControl.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Tools for rate limiting, bandwidth control and burstiness suppression. </p>
+<dl class="section author"><dt>Author</dt><dd>Zhao DAI </dd></dl>
+</div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

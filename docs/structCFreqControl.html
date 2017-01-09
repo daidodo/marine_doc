@@ -92,34 +92,331 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">CFreqControl Struct Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Rate limiting for high frequency (&gt;1Hz) jobs.  
+ <a href="structCFreqControl.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="freq__control_8hh_source.html">freq_control.hh</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:afb763c9b18aa0450397de097db4c697b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afb763c9b18aa0450397de097db4c697b"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>CFreqControl</b> (size_t freq, size_t bucketSz)</td></tr>
-<tr class="separator:afb763c9b18aa0450397de097db4c697b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a819d58f5ce65ed8813ba7714584aec10"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a819d58f5ce65ed8813ba7714584aec10"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>init</b> (size_t freq, size_t bucketSz)</td></tr>
-<tr class="separator:a819d58f5ce65ed8813ba7714584aec10"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a682dace1557bfee0b96d94cd1ceaf0ff"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a682dace1557bfee0b96d94cd1ceaf0ff"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>generate</b> (uint64_t nowUs)</td></tr>
-<tr class="separator:a682dace1557bfee0b96d94cd1ceaf0ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af110102f37dbce37c091292f21bd4414"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af110102f37dbce37c091292f21bd4414"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>generate</b> ()</td></tr>
-<tr class="separator:af110102f37dbce37c091292f21bd4414"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af4f9a79efa78c60a386f663d5bf9ee0e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af4f9a79efa78c60a386f663d5bf9ee0e"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>check</b> (size_t need) const </td></tr>
+<tr class="memitem:a38e7cb945cba5e5bc69ee4287357d0f5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structCFreqControl.html#a38e7cb945cba5e5bc69ee4287357d0f5">CFreqControl</a> ()</td></tr>
+<tr class="memdesc:a38e7cb945cba5e5bc69ee4287357d0f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor.  <a href="#a38e7cb945cba5e5bc69ee4287357d0f5">More...</a><br /></td></tr>
+<tr class="separator:a38e7cb945cba5e5bc69ee4287357d0f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9703740913d912e713bc8fbe2cdef19"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structCFreqControl.html#ab9703740913d912e713bc8fbe2cdef19">generate</a> (uint64_t nowUs=0)</td></tr>
+<tr class="memdesc:ab9703740913d912e713bc8fbe2cdef19"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate tokens.  <a href="#ab9703740913d912e713bc8fbe2cdef19">More...</a><br /></td></tr>
+<tr class="separator:ab9703740913d912e713bc8fbe2cdef19"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4f9a79efa78c60a386f663d5bf9ee0e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structCFreqControl.html#af4f9a79efa78c60a386f663d5bf9ee0e">check</a> (size_t need) const </td></tr>
+<tr class="memdesc:af4f9a79efa78c60a386f663d5bf9ee0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if there are enough tokens.  <a href="#af4f9a79efa78c60a386f663d5bf9ee0e">More...</a><br /></td></tr>
 <tr class="separator:af4f9a79efa78c60a386f663d5bf9ee0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8165b3277bdcd78ccf431065a6837039"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8165b3277bdcd78ccf431065a6837039"></a>
-ssize_t&#160;</td><td class="memItemRight" valign="bottom"><b>token</b> () const </td></tr>
+<tr class="memitem:a8165b3277bdcd78ccf431065a6837039"><td class="memItemLeft" align="right" valign="top">ssize_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structCFreqControl.html#a8165b3277bdcd78ccf431065a6837039">token</a> () const </td></tr>
+<tr class="memdesc:a8165b3277bdcd78ccf431065a6837039"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get number of tokens in bucket.  <a href="#a8165b3277bdcd78ccf431065a6837039">More...</a><br /></td></tr>
 <tr class="separator:a8165b3277bdcd78ccf431065a6837039"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a20fa0353a2f4d7a44e89157f71bf2b07"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a20fa0353a2f4d7a44e89157f71bf2b07"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>get</b> (size_t need=1)</td></tr>
+<tr class="memitem:a20fa0353a2f4d7a44e89157f71bf2b07"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structCFreqControl.html#a20fa0353a2f4d7a44e89157f71bf2b07">get</a> (size_t need=1)</td></tr>
+<tr class="memdesc:a20fa0353a2f4d7a44e89157f71bf2b07"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get tokens.  <a href="#a20fa0353a2f4d7a44e89157f71bf2b07">More...</a><br /></td></tr>
 <tr class="separator:a20fa0353a2f4d7a44e89157f71bf2b07"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa99d982ac7f4b6b478e82296a80e3849"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa99d982ac7f4b6b478e82296a80e3849"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>overdraft</b> (size_t need)</td></tr>
-<tr class="separator:aa99d982ac7f4b6b478e82296a80e3849"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc2aa31e57cdd3a015ffad7106b20783"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structCFreqControl.html#abc2aa31e57cdd3a015ffad7106b20783">overdraw</a> (size_t need)</td></tr>
+<tr class="memdesc:abc2aa31e57cdd3a015ffad7106b20783"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overdraw tokens.  <a href="#abc2aa31e57cdd3a015ffad7106b20783">More...</a><br /></td></tr>
+<tr class="separator:abc2aa31e57cdd3a015ffad7106b20783"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
+<tr class="memitem:afb763c9b18aa0450397de097db4c697b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structCFreqControl.html#afb763c9b18aa0450397de097db4c697b">CFreqControl</a> (size_t freq, size_t bucketSz)</td></tr>
+<tr class="memdesc:afb763c9b18aa0450397de097db4c697b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize this object.  <a href="#afb763c9b18aa0450397de097db4c697b">More...</a><br /></td></tr>
+<tr class="separator:afb763c9b18aa0450397de097db4c697b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a819d58f5ce65ed8813ba7714584aec10"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structCFreqControl.html#a819d58f5ce65ed8813ba7714584aec10">init</a> (size_t freq, size_t bucketSz)</td></tr>
+<tr class="memdesc:a819d58f5ce65ed8813ba7714584aec10"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize this object.  <a href="#a819d58f5ce65ed8813ba7714584aec10">More...</a><br /></td></tr>
+<tr class="separator:a819d58f5ce65ed8813ba7714584aec10"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Rate limiting for high frequency (&gt;1Hz) jobs. </p>
+<p><a class="el" href="structCFreqControl.html" title="Rate limiting for high frequency (&gt;1Hz) jobs. ">CFreqControl</a> is a convenient tool for rate limiting, based on <a href="https://en.wikipedia.org/wiki/Token_bucket">Token Bucket</a> algorithm. <br />
+ Given a frequency <code>F</code>, <a class="el" href="structCFreqControl.html" title="Rate limiting for high frequency (&gt;1Hz) jobs. ">CFreqControl</a> generates <code>F</code> tokens to bucket per second. Each token represents a job. When there is no token in the bucket, no new job should be created. <br />
+ The size of bucket is important for burstiness suppression. It denotes the maximum number of jobs created at once. In case of network transmission control for example, a proper bucket size leads to smooth traffic flow in despite of request bursts. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a38e7cb945cba5e5bc69ee4287357d0f5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">CFreqControl::CFreqControl </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Default constructor. </p>
+<p>You need to call <a class="el" href="structCFreqControl.html#a819d58f5ce65ed8813ba7714584aec10">init</a> before you can use this object. </p>
+
+</div>
+</div>
+<a class="anchor" id="afb763c9b18aa0450397de097db4c697b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">CFreqControl::CFreqControl </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>freq</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>bucketSz</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Initialize this object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">freq</td><td>A positive integer denoting frequency </td></tr>
+    <tr><td class="paramname">bucketSz</td><td>Max number of tokens the bucket can hold </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>You can <a class="el" href="structCFreqControl.html#a819d58f5ce65ed8813ba7714584aec10">init</a> this object again to change frequency and bucket size. </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="af4f9a79efa78c60a386f663d5bf9ee0e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CFreqControl::check </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>need</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Check if there are enough tokens. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">need</td><td>Number of tokens needed </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if there are at least <code>need</code> tokens in bucket; <code>false</code> otherwise </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ab9703740913d912e713bc8fbe2cdef19"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CFreqControl::generate </td>
+          <td>(</td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>nowUs</em> = <code>0</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Generate tokens. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nowUs</td><td>Current monotonic time, obtained from tools::MonoTimeUs(), can be omitted </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a20fa0353a2f4d7a44e89157f71bf2b07"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CFreqControl::get </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>need</em> = <code>1</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get tokens. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">need</td><td>Number of tokens needed </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li><code>true:</code> Succeeded. <code>need</code> tokens are removed from bucket; </li>
+<li><code>false:</code> Failed. No tokens are removed from bucket; </li>
+</ul>
+</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a819d58f5ce65ed8813ba7714584aec10"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CFreqControl::init </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>freq</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>bucketSz</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Initialize this object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">freq</td><td>A positive integer denoting frequency </td></tr>
+    <tr><td class="paramname">bucketSz</td><td>Max number of tokens the bucket can hold </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>You can <a class="el" href="structCFreqControl.html#a819d58f5ce65ed8813ba7714584aec10">init</a> this object again to change frequency and bucket size. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="abc2aa31e57cdd3a015ffad7106b20783"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CFreqControl::overdraw </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>need</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Overdraw tokens. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">need</td><td>Number of tokens needed </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li><code>true:</code> Succeeded. <code>need</code> tokens are removed or overdrawn from bucket; </li>
+<li><code>false:</code> Failed. No tokens are removed from bucket; </li>
+</ul>
+</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a8165b3277bdcd78ccf431065a6837039"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ssize_t CFreqControl::token </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get number of tokens in bucket. </p>
+<p>This function may return a negative number when tokens have been overdrawn. </p><dl class="section return"><dt>Returns</dt><dd><ul>
+<li>Positive number: Number of tokens in bucket; </li>
+<li>Negative number: Number of tokens overdrawn; </li>
+</ul>
+</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="structCFreqControl.html#abc2aa31e57cdd3a015ffad7106b20783" title="Overdraw tokens. ">overdraw</a> </dd></dl>
+
+</div>
+</div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
 <li><a class="el" href="freq__control_8hh_source.html">freq_control.hh</a></li>
 </ul>
