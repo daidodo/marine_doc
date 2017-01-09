@@ -43,10 +43,10 @@ DEP := $(ALL_CC_SRC:.cc=.d) $(C_SRC:.c=.d)
 CXXFLAGS += -MD
 CFLAGS += -MD
 
-TIME_FLAGS := -O2 -DNDEBUG
-GPROF_FLAGS := -g -pg
-GPERF_FLAGS := -g -O2 -DNDEBUG
-PERF_FLAGS := -g -O2 -DNDEBUG
+TIME_FLAGS :=  -D__TIME  -O2 -DNDEBUG
+GPROF_FLAGS := -D__GPROF -g -pg
+GPERF_FLAGS := -D__GPERF -O2 -DNDEBUG -g
+PERF_FLAGS :=  -D__PERF  -O2 -DNDEBUG -g
 
 all: time gprof gperf perf
 
@@ -61,41 +61,41 @@ perf: $(TARGET_PERF)
 proto: $(PB_CC_SRC)
 
 %.time: %.time.o $(TIME_OBJ)
-	$(CXX) $(TIME_FLAGS) $(CXXFLAGS) -D__TIME -o $@ $^ $(LIB)
+	$(CXX) $(TIME_FLAGS) $(CXXFLAGS) -o $@ $^ $(LIB)
 	@strip $@
 
 %.gprof: %.gprof.o $(GPROF_OBJ)
-	$(CXX) $(GPROF_FLAGS) $(CXXFLAGS) -D__GPROF -o $@ $^ $(LIB)
+	$(CXX) $(GPROF_FLAGS) $(CXXFLAGS) -o $@ $^ $(LIB)
 
 %.gperf: %.gperf.o $(GPERF_OBJ)
-	$(CXX) $(GPERF_FLAGS) $(CXXFLAGS) -D__GPERF -o $@ $^ $(LIB) -lprofiler
+	$(CXX) $(GPERF_FLAGS) $(CXXFLAGS) -o $@ $^ $(LIB) -lprofiler
 
 %.perf: %.perf.o $(PERF_OBJ)
-	$(CXX) $(PERF_FLAGS) $(CXXFLAGS) -D__PERF -o $@ $^ $(LIB)
+	$(CXX) $(PERF_FLAGS) $(CXXFLAGS) -o $@ $^ $(LIB)
 
 %.time.o: %.cc
-	$(CXX) $(TIME_FLAGS) $(CXXFLAGS) -D__TIME -c -o $@ $<
+	$(CXX) $(TIME_FLAGS) $(CXXFLAGS) -c -o $@ $<
 
 %.time.o: %.c
-	$(CC) $(TIME_FLAGS) $(CFLAGS) -D__TIME -c -o $@ $<
+	$(CC) $(TIME_FLAGS) $(CFLAGS) -c -o $@ $<
 
 %.gprof.o: %.cc
-	$(CXX) $(GPROF_FLAGS) $(CXXFLAGS) -D__GPROF -c -o $@ $<
+	$(CXX) $(GPROF_FLAGS) $(CXXFLAGS) -c -o $@ $<
 
 %.gprof.o: %.c
-	$(CC) $(GPROF_FLAGS) $(CFLAGS) -D__GPROF -c -o $@ $<
+	$(CC) $(GPROF_FLAGS) $(CFLAGS) -c -o $@ $<
 
 %.gperf.o: %.cc
-	$(CXX) $(GPERF_FLAGS) $(CXXFLAGS) -D__GPERF -c -o $@ $<
+	$(CXX) $(GPERF_FLAGS) $(CXXFLAGS) -c -o $@ $<
 
 %.gperf.o: %.c
-	$(CC) $(GPERF_FLAGS) $(CFLAGS) -D__GPERF -c -o $@ $<
+	$(CC) $(GPERF_FLAGS) $(CFLAGS) -c -o $@ $<
 
 %.perf.o: %.cc
-	$(CXX) $(PERF_FLAGS) $(CXXFLAGS) -D__PERF -c -o $@ $<
+	$(CXX) $(PERF_FLAGS) $(CXXFLAGS) -c -o $@ $<
 
 %.perf.o: %.c
-	$(CC) $(PERF_FLAGS) $(CFLAGS) -D__PERF -c -o $@ $<
+	$(CC) $(PERF_FLAGS) $(CFLAGS) -c -o $@ $<
 
 %.pb.cc: %.proto
 	$(PROTOC) $(PROTOCFLAGS) $<
@@ -110,7 +110,7 @@ cleanall: clean
 	@find . -name "*.pb.h" | xargs rm -f
 	@find . -name "*.pb.cc" | xargs rm -f
 
-.PHONY: all time gprof gperf perf clean cleanall
+.PHONY: all time gprof gperf perf proto clean cleanall
 
 .SECONDARY: $(ALL_OBJ)
 
