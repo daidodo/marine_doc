@@ -14,7 +14,7 @@ TEST(CFreqControl, all)
     while(token < 1000){
         d.generate();
         if(d.token() > 0){
-            ASSERT_TRUE(d.overdraft(GET));
+            ASSERT_TRUE(d.overdraw(GET));
             token += GET;
         }else{
             ASSERT_FALSE(d.token() > 0);
